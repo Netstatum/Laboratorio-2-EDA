@@ -1,0 +1,11 @@
+- Dato ingresado: Nombre del medicamento, Nombre de un compuesto del
+  medicamento o el nombre de una sustancia (cloro, parafina, etc)
+- Si no hay datos sobre el compuesto hay que utilizar los síntomas para buscar
+  una solución
+- La solución son pasos que debe entregar el programa
+
+Ademas se debe poder:
+- Ingresar, editar, eliminar y buscar agentes y medidas de desintoxicación
+
+El formato de la base de datos debe ser un archivo de texto legible para los
+humanos y para el programa
