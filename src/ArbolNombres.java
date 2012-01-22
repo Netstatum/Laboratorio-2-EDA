@@ -30,7 +30,7 @@ class ArbolNombres{
 	/**Busca la cadena en el árbol ABB considerando que cadena es un
 	 * compuesto, si cadena es un medicamento entonces también se va a
 	 * buscar como si fuera uno, pero luego de ver si es un compuesto
-	 *@param cadena El string a buscar en el arbol ABB*/
+	 *@param cadena El string a buscar en el arbol ABB. Se ignoran las mayusculas*/
 	public Nodo BuscarCompuesto(String cadena)
 	{
 		if(this.raiz==null)
@@ -49,8 +49,9 @@ class ArbolNombres{
 		}
 	}
 
-	/**Busca la cadena en el árbol ABB.
-	 *@param cadena El string a buscar en el árbol ABB*/
+	/**Busca la cadena en el árbol ABB considerando a cadena como el nombre
+	 * de un medicamento
+	 *@param cadena El string a buscar en el árbol ABB. Se ignoran las mayusculas*/
 	public Nodo BuscarMedicamento(String cadena)
 	{
 		if(this.raiz==null)
@@ -138,7 +139,8 @@ class ArbolNombres{
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario dado 
 	 * @param raiz Raíz del árbol binario en donde buscar la cadena.
-	 * @param cadena Un string a buscar en el árbol binario
+	 * @param cadena Un string a buscar en el árbol binario se ignoran las
+	 * mayusculas
 	 * */
 	private Nodo buscar_compuesto(Nodo raiz, String cadena)
 	{
@@ -170,7 +172,8 @@ class ArbolNombres{
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario dado 
 	 * @param raiz Raíz del árbol binario en donde buscar la cadena.
-	 * @param cadena Un string a buscar en el árbol binario
+	 * @param cadena Un string a buscar en el árbol binario. Se ignoran las
+	 * mayusculas
 	 * */
 	private Nodo buscar_medicamento(Nodo raiz, String cadena)
 	{
