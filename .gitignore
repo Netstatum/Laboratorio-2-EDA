@@ -1,0 +1,15 @@
+#Aquí están los archivos que no queremos que git controle como archivos .exe y
+#cosas que no necesitamos
+
+#Archivos generados por el OS
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.d
+
+#Arcivos de java
+*.class
+*.jar
+
+#no queremos enviar las ctags
+tags
