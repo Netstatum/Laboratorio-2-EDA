@@ -13,3 +13,6 @@ jar-debug: debug
 
 clear:
 	rm *.class trinity.jar trinity-manpage.pdf
+	rm -r docs
+doc:
+	doxygen documentacion.cfg
