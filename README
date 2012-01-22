@@ -9,3 +9,28 @@ Ademas se debe poder:
 
 El formato de la base de datos debe ser un archivo de texto legible para los
 humanos y para el programa
+
+**DOCUMENTACION**
+
+Vamos a utilizar doxygen para generar la documentacion del codigo fuente
+Los comentarios van arriba de las funciones y tienen este estilo:
+
+	/**Descripcion basica (termina en punto [.])
+	 *@param NOMBRE_PARAMETRO1 DESCRIPCION1
+	 *@param NOMBRE_PARAMETRO2 DESCRIPCION2 
+	 *@return RETORNO (si es que retorna algo)
+	 *
+	 *Explicacion detallada si es necesaria de la funcion*/
+
+Noten que el comentario parte con dos asteriscos (**)
+
+Para comentar variables dentro de una clase es:
+
+/** Descripcion de la variable
+  * etc, etc*/
+ int variable;
+
+Para generar la documentacion hacemos en el directorio src/:
+"doxygen documentacion.cfg" o "make doc" si tenemos make instalado
+Luego vamos al directorio docs/latex y ejecutamos "make". Nos va a crear un
+archivo llamado refman.pdf que contiene la documentacion del codigo fuente
