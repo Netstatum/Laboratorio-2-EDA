@@ -77,7 +77,7 @@ class ArbolNombres{
 	 *@param nodo el nodo a agregar al árbol ABB*/
 	private void agregar_compuesto(Nodo raiz, Nodo nodo)
 	{
-		int comparacion=raiz.nombre_compuesto.compareTo(nodo.nombre_compuesto);
+		int comparacion=raiz.nombre_compuesto.compareToIgnoreCase(nodo.nombre_compuesto);
 		if(comparacion<0)
 		{
 			//Vemos si podemos agregar el nodo a la izquierda
@@ -110,7 +110,7 @@ class ArbolNombres{
 	 *@param nodo: el nodo a agregar al árbol ABB*/
 	private void agregar_medicamento(Nodo raiz, Nodo nodo)
 	{
-		int comparacion=raiz.nombre_medicamento.compareTo(nodo.nombre_medicamento);
+		int comparacion=raiz.nombre_medicamento.compareToIgnoreCase(nodo.nombre_medicamento);
 
 		if(comparacion<0)
 		{
@@ -147,7 +147,7 @@ class ArbolNombres{
 			//No encontramos el compuesto dado
 			return null;
 		}else{
-			int compuesto=raiz.nombre_compuesto.compareTo(cadena);
+			int compuesto=raiz.nombre_compuesto.compareToIgnoreCase(cadena);
 
 			if(compuesto==0)
 			{
@@ -179,7 +179,7 @@ class ArbolNombres{
 			//No encontramos el medicamento dado
 			return null;
 		}else{
-			int medicamento=raiz.nombre_medicamento.compareTo(cadena);
+			int medicamento=raiz.nombre_medicamento.compareToIgnoreCase(cadena);
 
 			if(medicamento==0)
 			{
