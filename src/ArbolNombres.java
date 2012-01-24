@@ -1,6 +1,8 @@
 /**Esta clase implementa un Árbol binario de búsqueda (ABB) ordenado con
  * respecto a los nombres de medicamento y nombres de compuesto.*/
 
+import java.util.Vector;
+
 class ArbolNombres{
 
 	/**@brief Apunta a la raíz principal de donde salen todos los nodos.
@@ -47,6 +49,13 @@ class ArbolNombres{
 				return nodo;
 			}
 		}
+	}
+
+	public Vector<Nodo> Nodos()
+	{
+		Vector<Nodo> vector=new Vector();
+		this.Nodo(vector, this.raiz.izq);
+		return vector;
 	}
 
 	/**Busca la cadena en el árbol ABB considerando a cadena como el nombre
@@ -200,6 +209,21 @@ class ArbolNombres{
 					return buscar_medicamento(raiz.der, cadena);
 				}
 			}
+		}
+	}
+
+	private void Nodo(Vector<Nodo> vector, Nodo raiz)
+	{
+		if(raiz==null)
+		{
+			return;
+		}else{
+			if(!vector.contains(raiz))
+			{
+				vector.add(raiz);
+			}
+			this.Nodo(vector, raiz.izq);
+			this.Nodo(vector, raiz.der);
 		}
 	}
 }
