@@ -1,10 +1,12 @@
+import java.util.Vector;
+
 class Nodo{
 	String nombre_medicamento;
 	String nombre_compuesto;
 
-	/**Array que contiene los síntomas del compuesto o medicamento que se
+	/**Vector que contiene los síntomas del compuesto o medicamento que se
 	 * encuentra en este nodo*/
-	String []sintomas;
+	Vector<String> sintomas;
 
 	/**Nodos hijos de este nodo*/
 	Nodo izq, der;
@@ -15,15 +17,15 @@ class Nodo{
 	 * @param nombre_compuesto El nombre del compuesto que contendra en nodo
 	 * @param sintomas Un array de los posibles síntomas que pueda tener el
 	 * ingerir este medicamento o compuesto o sustancia*/
-	Nodo(String nombre_medicamento, String nombre_compuesto, String []sintomas)
+	Nodo(String nombre_medicamento, String nombre_compuesto)
 	{
-		this.inicializar(nombre_medicamento, nombre_compuesto, sintomas);
+		this.inicializar(nombre_medicamento, nombre_compuesto);
 	}
 
 	/**Inicia un nuevo nodo vació*/
 	Nodo()
 	{
-		this.inicializar(null, null, null);
+		this.inicializar(null, null);
 	}
 
 	/**Se encarga de inicializar las variables de acuerdo a los argumentos
@@ -33,7 +35,7 @@ class Nodo{
 	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo
 	 * @param sintomas Un array de los posibles síntomas que pueda tener el
 	 * ingerir este medicamento o compuesto o sustancia*/
-	void inicializar(String nombre_medicamento, String nombre_compuesto, String []sintomas)
+	void inicializar(String nombre_medicamento, String nombre_compuesto)
 	{
 
 		this.nombre_medicamento=nombre_medicamento;
@@ -42,6 +44,12 @@ class Nodo{
 
 		this.izq=null;
 		this.der=null;
+		this.sintomas=new Vector();
+	}
+
+	public void AgregarSintoma(String cadena)
+	{
+		this.sintomas.add(cadena);
 	}
 
 }
