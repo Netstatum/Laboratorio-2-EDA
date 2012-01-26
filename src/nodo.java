@@ -52,4 +52,14 @@ class Nodo{
 		this.sintomas.add(cadena);
 	}
 
+	public void setNombreMedicamento(String nombre)
+	{
+		this.nombre_medicamento=nombre;
+	}
+
+	public void setNombreCompuesto(String nombre)
+	{
+		this.nombre_compuesto=nombre;
+	}
+
 }
