@@ -3,16 +3,16 @@ all:
 
 
 jar: all
-	jar cfe trinity.jar trinity *.class
+	jar cfe ToxicDrop.jar ToxicDrop *.class
 
 debug:
 	javac -g *.java
 
 jar-debug: debug
-	 jar cfe trinity.jar trinity *.class
+	 jar cfe ToxicDrop.jar ToxicDrop *.class
 
 clear:
-	rm *.class trinity.jar trinity-manpage.pdf
+	rm *.class ToxicDrop.jar
 	rm -r docs
 doc:
 	doxygen documentacion.cfg
