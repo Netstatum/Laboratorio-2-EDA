@@ -62,15 +62,15 @@ class Serializar{
 			c="";
 			nodo=this.nodos.elementAt(i);
 
-			c+="nombre_medicamento = "+nodo.nombre_medicamento+"\n";
-			c+="nombre_compuesto = "+nodo.nombre_compuesto;
+			c+="nombre_medicamento = "+nodo.getNombreMedicamento()+"\n";
+			c+="nombre_compuesto = "+nodo.getNombreCompuesto();
 			
-			if(nodo.sintomas.size()>0)
+			if(nodo.getSintomas().size()>0)
 			{
 				c+="\nsintomas = ";
-				for(j=0;j<nodo.sintomas.size();j++)
+				for(j=0;j<nodo.getSintomas().size();j++)
 				{
-					c+=nodo.sintomas.elementAt(j)+",";
+					c+=nodo.getSintomas().elementAt(j)+",";
 				}
 			}
 			c+="\n\n";

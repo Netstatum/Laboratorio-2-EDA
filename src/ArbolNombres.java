@@ -20,13 +20,13 @@ class ArbolNombres{
 	 *@param nodo Un nodo que se quiera agregar al árbol ABB*/
 	public void Agregar(Nodo nodo)
 	{
-		if(this.raiz.izq==null && this.raiz.der==null)
+		if(this.raiz.getNodoIzq()==null && this.raiz.getNodoDer()==null)
 		{
-			this.raiz.izq=nodo;
-			this.raiz.der=nodo;
+			this.raiz.setNodoIzq(nodo);
+			this.raiz.setNodoDer(nodo);
 		}
-		this.agregar_medicamento(this.raiz.izq, nodo);
-		this.agregar_compuesto(this.raiz.der, nodo);
+		this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
+		this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
 	}
 
 	/**Busca la cadena en el árbol ABB considerando que cadena es un
@@ -39,12 +39,12 @@ class ArbolNombres{
 		{
 			return null;
 		}else{
-			Nodo nodo=this.buscar_compuesto(this.raiz.der, cadena);
+			Nodo nodo=this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
 			if(nodo==null)
 			{
 				//no encontramos la cadena ingresada como si
 				//fuera un compuesto. Tal vez un medicamento?
-				return this.buscar_medicamento(this.raiz.izq, cadena);
+				return this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
 			}else{
 				return nodo;
 			}
@@ -54,7 +54,7 @@ class ArbolNombres{
 	public Vector<Nodo> Nodos()
 	{
 		Vector<Nodo> vector=new Vector();
-		this.Nodo(vector, this.raiz.izq);
+		this.Nodo(vector, this.raiz.getNodoIzq());
 		return vector;
 	}
 
@@ -67,12 +67,12 @@ class ArbolNombres{
 		{
 			return null;
 		}else{
-			Nodo nodo=this.buscar_medicamento(this.raiz.izq, cadena);
+			Nodo nodo=this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
 			if(nodo==null)
 			{
 				//no encontramos la cadena ingresada como si
 				//fuera un compuesto. Tal vez un medicamento?
-				return this.buscar_compuesto(this.raiz.der, cadena);
+				return this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
 			}else{
 				return nodo;
 			}
@@ -87,25 +87,25 @@ class ArbolNombres{
 	 *@param nodo el nodo a agregar al árbol ABB*/
 	private void agregar_compuesto(Nodo raiz, Nodo nodo)
 	{
-		int comparacion=raiz.nombre_compuesto.compareToIgnoreCase(nodo.nombre_compuesto);
+		int comparacion=raiz.getNombreCompuesto().compareToIgnoreCase(nodo.getNombreCompuesto());
 		if(comparacion<0)
 		{
 			//Vemos si podemos agregar el nodo a la izquierda
-			if(raiz.izq==null)
+			if(raiz.getNodoIzq()==null)
 			{
 				//agregamos el nodo
-				raiz.izq=nodo;
+				raiz.setNodoIzq(nodo);
 			}else{
 				//seguimos buscando por un nodo vació
-				agregar_compuesto(raiz.izq, nodo);
+				agregar_compuesto(raiz.getNodoIzq(), nodo);
 			}
 		}else if(comparacion>0){
 			//vemos si podemos agregar el nodo a la derecha
-			if(raiz.der==null)
+			if(raiz.getNodoDer()==null)
 			{
-				raiz.der=nodo;
+				raiz.setNodoDer(nodo);
 			}else{
-				agregar_compuesto(raiz.der, nodo);
+				agregar_compuesto(raiz.getNodoDer(), nodo);
 			}
 		}else{
 			//encontramos el mismo compuesto...lo
@@ -120,24 +120,24 @@ class ArbolNombres{
 	 *@param nodo: el nodo a agregar al árbol ABB*/
 	private void agregar_medicamento(Nodo raiz, Nodo nodo)
 	{
-		int comparacion=raiz.nombre_medicamento.compareToIgnoreCase(nodo.nombre_medicamento);
+		int comparacion=raiz.getNombreMedicamento().compareToIgnoreCase(nodo.getNombreMedicamento());
 
 		if(comparacion<0)
 		{
 			//izquierda
-			if(raiz.izq==null)
+			if(raiz.getNodoIzq()==null)
 			{
-				raiz.izq=nodo;
+				raiz.setNodoIzq(nodo);
 			}else{
-				agregar_medicamento(raiz.izq, nodo);
+				agregar_medicamento(raiz.getNodoIzq(), nodo);
 			}
 		}else if(comparacion>0){
 			//derecha
-			if(raiz.der==null)
+			if(raiz.getNodoDer()==null)
 			{
-				raiz.der=nodo;
+				raiz.setNodoDer(nodo);
 			}else{
-				agregar_medicamento(raiz.der, nodo);
+				agregar_medicamento(raiz.getNodoDer(), nodo);
 			}
 		}else{
 			//encontramos el mismo medicamento...lo
@@ -158,7 +158,7 @@ class ArbolNombres{
 			//No encontramos el compuesto dado
 			return null;
 		}else{
-			int compuesto=raiz.nombre_compuesto.compareToIgnoreCase(cadena);
+			int compuesto=raiz.getNombreCompuesto().compareToIgnoreCase(cadena);
 
 			if(compuesto==0)
 			{
@@ -171,9 +171,9 @@ class ArbolNombres{
 
 				if(compuesto<0)
 				{
-					return buscar_compuesto(raiz.izq, cadena);
+					return buscar_compuesto(raiz.getNodoIzq(), cadena);
 				}else{
-					return buscar_compuesto(raiz.der, cadena);
+					return buscar_compuesto(raiz.getNodoDer(), cadena);
 				}
 			}
 		}
@@ -191,7 +191,7 @@ class ArbolNombres{
 			//No encontramos el medicamento dado
 			return null;
 		}else{
-			int medicamento=raiz.nombre_medicamento.compareToIgnoreCase(cadena);
+			int medicamento=raiz.getNombreMedicamento().compareToIgnoreCase(cadena);
 
 			if(medicamento==0)
 			{
@@ -204,9 +204,9 @@ class ArbolNombres{
 
 				if(medicamento<0)
 				{
-					return buscar_medicamento(raiz.izq, cadena);
+					return buscar_medicamento(raiz.getNodoIzq(), cadena);
 				}else{
-					return buscar_medicamento(raiz.der, cadena);
+					return buscar_medicamento(raiz.getNodoDer(), cadena);
 				}
 			}
 		}
@@ -222,8 +222,8 @@ class ArbolNombres{
 			{
 				vector.add(raiz);
 			}
-			this.Nodo(vector, raiz.izq);
-			this.Nodo(vector, raiz.der);
+			this.Nodo(vector, raiz.getNodoIzq());
+			this.Nodo(vector, raiz.getNodoDer());
 		}
 	}
 }

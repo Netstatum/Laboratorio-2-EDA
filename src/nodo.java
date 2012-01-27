@@ -1,15 +1,15 @@
 import java.util.Vector;
 
 class Nodo{
-	String nombre_medicamento;
-	String nombre_compuesto;
+	private String nombre_medicamento;
+	private String nombre_compuesto;
 
 	/**Vector que contiene los síntomas del compuesto o medicamento que se
 	 * encuentra en este nodo*/
-	Vector<String> sintomas;
+	private Vector<String> sintomas;
 
 	/**Nodos hijos de este nodo*/
-	Nodo izq, der;
+	private Nodo izq, der;
 
 	/**Inicia un nuevo nodo con los argumentos dados
 	 * @param nombre_medicamento El nombre del medicamento que contendrá el
@@ -32,9 +32,7 @@ class Nodo{
 	 * dados
 	 * @param nombre_medicamento El nombre del medicamento que contendrá el
 	 * nodo
-	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo
-	 * @param sintomas Un array de los posibles síntomas que pueda tener el
-	 * ingerir este medicamento o compuesto o sustancia*/
+	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo*/
 	void inicializar(String nombre_medicamento, String nombre_compuesto)
 	{
 
@@ -62,4 +60,39 @@ class Nodo{
 		this.nombre_compuesto=nombre;
 	}
 
+	public String getNombreMedicamento()
+	{
+		return this.nombre_medicamento;
+	}
+
+	public String getNombreCompuesto()
+	{
+		return this.nombre_compuesto;
+	}
+
+	public void setNodoIzq(Nodo nodo)
+	{
+		this.izq=nodo;
+	}
+
+	public void setNodoDer(Nodo nodo)
+	{
+		this.der=nodo;
+	}
+
+
+	public Nodo getNodoDer()
+	{
+		return this.der;
+	}
+
+	public Nodo getNodoIzq()
+	{
+		return this.izq;
+	}
+
+	public Vector<String> getSintomas()
+	{
+		return this.sintomas;
+	}
 }
