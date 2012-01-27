@@ -24,9 +24,10 @@ class ArbolNombres{
 		{
 			this.raiz.setNodoIzq(nodo);
 			this.raiz.setNodoDer(nodo);
+		}else{
+			this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
+			this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
 		}
-		this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
-		this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
 	}
 
 	/**Busca la cadena en el árbol ABB considerando que cadena es un
