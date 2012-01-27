@@ -212,6 +212,9 @@ class ArbolNombres{
 		}
 	}
 
+	/**Agrega todos los nodos del arbol al vector dado como argumento
+	 * @param vector El vector que contendra a los nodos del arbol
+	 * @param raiz La raiz inicial de un arbol que contenga nodos*/
 	private void Nodo(Vector<Nodo> vector, Nodo raiz)
 	{
 		if(raiz==null)
