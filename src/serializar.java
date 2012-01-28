@@ -1,6 +1,6 @@
 /**Esta clase implementa métodos para convertir objetos Nodo a un string que
  * pueda ser escrito en un archivo y el proceso inverso*/
-import java.util.Vector;
+import java.util.*;
 
 class Serializar{
 
@@ -15,6 +15,7 @@ class Serializar{
 	Serializar(String cadena)
 	{
 		this.cadena=cadena;
+		limpiar();
 		this.nodos=new Vector();
 		this.des_serializar();
 	}
@@ -63,9 +64,16 @@ class Serializar{
 		{
 			c="";
 			nodo=this.nodos.elementAt(i);
+			
+			if(nodo.getNombreMedicamento()!=null)
+			{
+				c+="nombre_medicamento = "+nodo.getNombreMedicamento()+"\n";
+			}
 
-			c+="nombre_medicamento = "+nodo.getNombreMedicamento()+"\n";
-			c+="nombre_compuesto = "+nodo.getNombreCompuesto();
+			if(nodo.getNombreCompuesto()!=null)
+			{
+				c+="nombre_compuesto = "+nodo.getNombreCompuesto();
+			}
 			
 			//solo si hay síntomas los mostramos en el string
 			if(nodo.getSintomas().size()>0)
@@ -136,49 +144,53 @@ class Serializar{
 		int i;
 		for(i=0;i<lineas.length;i++)
 		{
-			//separamos las lineas por el símbolo "="
-			//cada linea contiene los datos de esta forma:
-			//VARIABLE = VALOR
-			//Al separar con split VARIABLE y VALOR quedan guardadas
-			//en un array (asignación) en el cual el primer elemento
-			//es la VARIABLE y el segundo el VALOR de la variable
-			asignacion=lineas[i].split("=");
-
-			if(asignacion.length==2) //esta linea es valida
+			if(lineas[i]!="")
 			{
-			
-				//eliminamos los espacios en blanco al final y
-				//al principio de la cadena si es que existen
-				variable=asignacion[0].trim();
-				valor=asignacion[1].trim();
+				//separamos las lineas por el símbolo "="
+				//cada linea contiene los datos de esta forma:
+				//VARIABLE = VALOR
+				//Al separar con split VARIABLE y VALOR quedan guardadas
+				//en un array (asignación) en el cual el primer elemento
+				//es la VARIABLE y el segundo el VALOR de la variable
+				asignacion=lineas[i].split("=");
 
-				if(variable.equalsIgnoreCase("nombre_medicamento"))
+				if(asignacion.length==2) //esta linea es valida
 				{
-					//encontramos una variable
-					//nombre_medicamento, la agregamos al
-					//nodo
-					nodo.setNombreMedicamento(asignacion[1]);
 
-				}else if(variable.equalsIgnoreCase("nombre_compuesto")){
+					//eliminamos los espacios en blanco al final y
+					//al principio de la cadena si es que existen
+					variable=asignacion[0].trim();
+					valor=asignacion[1].trim();
 
-					//encontramos una variable
-					//nombre_compuesto, la agregamos al
-					//nodo
-					nodo.setNombreCompuesto(asignacion[1]);
 
-				}else if(variable.equalsIgnoreCase("sintomas")){
-					
-					//llamamos a crear_sintomas que se va a
-					//encargar de agregar los síntomas al
-					//nodo dado
-					crear_sintomas(valor, nodo);
+					if(variable.equalsIgnoreCase("nombre_medicamento"))
+					{
+						//encontramos una variable
+						//nombre_medicamento, la agregamos al
+						//nodo
+						nodo.setNombreMedicamento(asignacion[1]);
 
+					}else if(variable.equalsIgnoreCase("nombre_compuesto")){
+
+						//encontramos una variable
+						//nombre_compuesto, la agregamos al
+						//nodo
+						nodo.setNombreCompuesto(asignacion[1]);
+
+					}else if(variable.equalsIgnoreCase("sintomas")){
+
+						//llamamos a crear_sintomas que se va a
+						//encargar de agregar los síntomas al
+						//nodo dado
+						crear_sintomas(valor, nodo);
+
+					}else{
+						//no valido
+						return null;
+					}
 				}else{
-					//no valido
 					return null;
 				}
-			}else{
-				return null;
 			}
 		}
 
@@ -206,5 +218,35 @@ class Serializar{
 				nodo.AgregarSintoma(valores[i].trim());
 			}
 		}
+	}
+
+	/**Limpia la entrada para que se pueda interpretar correctamente*/
+	private void limpiar()
+	{
+		//buscamos cosas que no deberian existir en el string
+		//y las reemplazamos
+
+		int i;
+		int saltos_linea=0;
+		String nueva="";
+
+		//si hay 3 o mas saltos de linea seguidos los sacamos
+		for(i=0;i<this.cadena.length();i++)
+		{
+			if(this.cadena.charAt(i)=='\n')
+			{
+				saltos_linea++;
+			}else{
+				saltos_linea=0;
+			}
+
+			if(saltos_linea<=2)
+			{
+				nueva+=cadena.charAt(i);
+			}
+		}
+
+		this.cadena=nueva;
+
 	}
 }
