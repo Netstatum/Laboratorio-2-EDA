@@ -1,10 +1,10 @@
-/**Esta clase implementa metodos para convertir objetos Nodo a un string que
+/**Esta clase implementa métodos para convertir objetos Nodo a un string que
  * pueda ser escrito en un archivo y el proceso inverso*/
 import java.util.Vector;
 
 class Serializar{
 
-	/**Cadena que representa la version imprimible de los objetos Nodo*/
+	/**Cadena que representa la versión imprimible de los objetos Nodo*/
 	private String cadena;
 
 	/**Los nodos obtenidos del string dado en el constructor*/
@@ -67,24 +67,24 @@ class Serializar{
 			c+="nombre_medicamento = "+nodo.getNombreMedicamento()+"\n";
 			c+="nombre_compuesto = "+nodo.getNombreCompuesto();
 			
-			//solo si hay sintomas los mostramos en el string
+			//solo si hay síntomas los mostramos en el string
 			if(nodo.getSintomas().size()>0)
 			{
 				c+="\nsintomas = ";
 				for(j=0;j<nodo.getSintomas().size();j++)
 				{
-					//Agregamos cada sintoma al string c
+					//Agregamos cada síntoma al string c
 					//separados por comas
 					c+=nodo.getSintomas().elementAt(j)+",";
 				}
 			}
 
 
-			//esto es obligacion: debemos separar cada bloque por un
+			//esto es obligación: debemos separar cada bloque por un
 			//salto de linea. El primer salto de linea no se cuenta
 			//ya que es el que va al final de la linea de
-			//nombre_compuesto en el caso de que no hayan sintomas o
-			//al final de sintomas en el caso de que si hayan.
+			//nombre_compuesto en el caso de que no hayan síntomas o
+			//al final de síntomas en el caso de que si hayan.
 			//El segundo salto de linea separa cada bloque de
 			//variables entre si.
 			c+="\n\n";
@@ -104,8 +104,8 @@ class Serializar{
 		//cada linea de un bloque, osea, conjunto de variables
 		String []lineas;
 
-		//aqui vamos guardando los nodos que vamos creando a partir de
-		//las variables leidas del string
+		//aquí vamos guardando los nodos que vamos creando a partir de
+		//las variables leídas del string
 		this.nodos=new Vector();
 		Nodo nodo;
 
@@ -136,11 +136,11 @@ class Serializar{
 		int i;
 		for(i=0;i<lineas.length;i++)
 		{
-			//separamos las lineas por el simbolo "="
+			//separamos las lineas por el símbolo "="
 			//cada linea contiene los datos de esta forma:
 			//VARIABLE = VALOR
 			//Al separar con split VARIABLE y VALOR quedan guardadas
-			//en un array (asignacion) en el cual el primer elemento
+			//en un array (asignación) en el cual el primer elemento
 			//es la VARIABLE y el segundo el VALOR de la variable
 			asignacion=lineas[i].split("=");
 
@@ -169,7 +169,7 @@ class Serializar{
 				}else if(variable.equalsIgnoreCase("sintomas")){
 					
 					//llamamos a crear_sintomas que se va a
-					//encargar de agregar los sintomas al
+					//encargar de agregar los síntomas al
 					//nodo dado
 					crear_sintomas(valor, nodo);
 
@@ -185,23 +185,23 @@ class Serializar{
 		return nodo;
 	}
 
-	/**Lee los sintomas desde el string valor en donde estan separados por
+	/**Lee los síntomas desde el string valor en donde están separados por
 	 * comas y las agrega al nodo dado
-	 * @param valor String que contiene a los sintomas separados por comas:
-	 * vomitos,mareos,etc
-	 * @param nodo Nodo al cual se va a agregar los sintomas*/
+	 * @param valor String que contiene a los síntomas separados por comas:
+	 * vómitos,mareos,etc
+	 * @param nodo Nodo al cual se va a agregar los síntomas*/
 	private void crear_sintomas(String valor, Nodo nodo)
 	{
 		int i;
 
-		//los valores de los sintomas estan separados por una coma
+		//los valores de los síntomas están separados por una coma
 		String []valores=valor.split(",");
 
 		for(i=0;i<valores.length;i++)
 		{
 			if(valores[i]!=null)
 			{
-				//encontramos un sintoma valido, le sacamos los
+				//encontramos un síntoma valido, le sacamos los
 				//espacios a ambos lados y lo agregamos a nodo
 				nodo.AgregarSintoma(valores[i].trim());
 			}

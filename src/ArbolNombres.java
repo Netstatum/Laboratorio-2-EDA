@@ -34,14 +34,14 @@ class ArbolNombres{
 	/**Busca la cadena en el árbol ABB considerando que cadena es un
 	 * compuesto, si cadena es un medicamento entonces también se va a
 	 * buscar como si fuera uno, pero luego de ver si es un compuesto, si no
-	 * se encuentra se lanza la excepcion ArbolNombres_NoEncontrado
-	 *@param cadena El string a buscar en el arbol ABB. Se ignoran las mayusculas
+	 * se encuentra se lanza la excepción ArbolNombres_NoEncontrado
+	 *@param cadena El string a buscar en el árbol ABB. Se ignoran las mayúsculas
 	 *@return El nodo encontrado*/
 	public Nodo BuscarCompuesto(String cadena)throws ArbolNombres_NoEncontrado
 	{
 		if(this.raiz==null)
 		{
-			throw new ArbolNombres_NoEncontrado("No hay ningun nodo en la base de datos");
+			throw new ArbolNombres_NoEncontrado("No hay ningún nodo en la base de datos");
 		}else{
 			Nodo nodo=this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
 			if(nodo==null)
@@ -63,9 +63,9 @@ class ArbolNombres{
 	}
 
 	/**Busca la cadena en el árbol ABB considerando a cadena como el nombre
-	 * de un medicamento, si no se encuentra se lanza la excepcion
+	 * de un medicamento, si no se encuentra se lanza la excepción
 	 * ArbolNombres_NoEncontrado
-	 *@param cadena El string a buscar en el árbol ABB. Se ignoran las mayusculas
+	 *@param cadena El string a buscar en el árbol ABB. Se ignoran las mayúsculas
 	 *@return El nodo encontrado*/
 	public Nodo BuscarMedicamento(String cadena)throws ArbolNombres_NoEncontrado
 	{
@@ -153,18 +153,18 @@ class ArbolNombres{
 	}
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario dado,
-	 * si no se encuentra entonces se lanza una excepcion
+	 * si no se encuentra entonces se lanza una excepción
 	 * ArbolNombres_NoEncontrado
 	 * @param raiz Raíz del árbol binario en donde buscar la cadena.
 	 * @param cadena Un string a buscar en el árbol binario se ignoran las
-	 * mayusculas
+	 * mayúsculas
 	 * */
 	private Nodo buscar_compuesto(Nodo raiz, String cadena)throws ArbolNombres_NoEncontrado
 	{
 		if(raiz==null)
 		{
 			//No encontramos el compuesto dado
-			throw new ArbolNombres_NoEncontrado("No se encontro "+cadena+" en la base de datos");
+			throw new ArbolNombres_NoEncontrado("No se encontró "+cadena+" en la base de datos");
 		}else{
 			int compuesto=raiz.getNombreCompuesto().compareToIgnoreCase(cadena);
 
@@ -188,18 +188,18 @@ class ArbolNombres{
 	}
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario
-	 * dado, si no encuentra la cadena entonces lanza una excepcion
+	 * dado, si no encuentra la cadena entonces lanza una excepción
 	 * ArbolNombres_NoEncontrado
 	 * @param raiz Raíz del árbol binario en donde buscar la cadena.
 	 * @param cadena Un string a buscar en el árbol binario. Se ignoran las
-	 * mayusculas
+	 * mayúsculas
 	 * */
 	private Nodo buscar_medicamento(Nodo raiz, String cadena)throws ArbolNombres_NoEncontrado
 	{
 		if(raiz==null)
 		{
 			//No encontramos el medicamento dado
-			throw new ArbolNombres_NoEncontrado("No se encontro "+cadena+" en la base de datos");
+			throw new ArbolNombres_NoEncontrado("No se encontró "+cadena+" en la base de datos");
 		}else{
 			int medicamento=raiz.getNombreMedicamento().compareToIgnoreCase(cadena);
 
@@ -222,9 +222,9 @@ class ArbolNombres{
 		}
 	}
 
-	/**Agrega todos los nodos del arbol al vector dado como argumento
-	 * @param vector El vector que contendra a los nodos del arbol
-	 * @param raiz La raiz inicial de un arbol que contenga nodos*/
+	/**Agrega todos los nodos del árbol al vector dado como argumento
+	 * @param vector El vector que contendrá a los nodos del árbol
+	 * @param raiz La raíz inicial de un árbol que contenga nodos*/
 	private void Nodo(Vector<Nodo> vector, Nodo raiz)
 	{
 		if(raiz==null)
@@ -241,7 +241,7 @@ class ArbolNombres{
 	}
 }
 
-/**Clase de excepcion para lanzar en caso de no encontrar un nodo*/
+/**Clase de excepción para lanzar en caso de no encontrar un nodo*/
 class ArbolNombres_NoEncontrado extends Exception{
 
 	ArbolNombres_NoEncontrado(String mensaje)
