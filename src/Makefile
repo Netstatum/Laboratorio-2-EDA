@@ -3,7 +3,7 @@ all: interfaz-grafica
 
 
 jar: all
-	jar cfe ToxicDrop.jar ToxicDrop *.class
+	jar cfe ToxicDrop.jar Main *.class Grafica/src/Imagenes/*
 
 #aqui utlizamos sed para sacar los packages y modifiar los directorios en
 #los cuales se encuentran las imagenes ya que vamos a ejecutar fuera del 
@@ -20,7 +20,7 @@ debug:
 	javac -g *.java
 
 jar-debug: debug
-	 jar cfe ToxicDrop.jar ToxicDrop *.class
+	jar cfe ToxicDrop.jar Main *.class Grafica/src/Imagenes/*
 
 clear:
 	rm *.class ToxicDrop.jar
