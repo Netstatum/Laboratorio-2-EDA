@@ -225,28 +225,28 @@ class Serializar{
 	{
 		//buscamos cosas que no deberian existir en el string
 		//y las reemplazamos
-
+		
+		//buscamos 3 o mas saltos de linea juntos
+		int index=this.cadena.indexOf("\n\n\n");
 		int i;
-		int saltos_linea=0;
-		String nueva="";
-
-		//si hay 3 o mas saltos de linea seguidos los sacamos
-		for(i=0;i<this.cadena.length();i++)
+		String tmp;
+		while(index!=-1)
 		{
-			if(this.cadena.charAt(i)=='\n')
+			//buscamos el index en el cual dejan de existir los
+			//saltos de lineas \n
+			for(i=index;i<this.cadena.length();i++)
 			{
-				saltos_linea++;
-			}else{
-				saltos_linea=0;
+				if(this.cadena.charAt(i)!='\n')
+				{
+					//copiamos el string saltando los saltos
+					//de linea que estan demas
+					tmp=this.cadena.substring(0, index);
+					tmp+="\n\n"+this.cadena.substring(i);
+					this.cadena=tmp;
+					break;
+				}
 			}
-
-			if(saltos_linea<=2)
-			{
-				nueva+=cadena.charAt(i);
-			}
+			index=this.cadena.indexOf("\n\n\n");
 		}
-
-		this.cadena=nueva;
-
 	}
 }
