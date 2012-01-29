@@ -17,6 +17,14 @@ class ArbolNombres{
 		raiz=new Nodo();
 	}
 	
+	/**Inicializa un árbol ABB con los nodos dados
+	 *@param nodos Los nodos a agregar inicialmente al arbol*/
+	ArbolNombres(Vector<Nodo> nodos)
+	{
+		raiz=new Nodo();
+		this.Agregar(nodos);
+	}
+	
 	/**Agrega el nodo al árbol ABB
 	 *@param nodo Un nodo que se quiera agregar al árbol ABB*/
 	public void Agregar(Nodo nodo)
@@ -26,8 +34,25 @@ class ArbolNombres{
 			this.raiz.setNodoIzq(nodo);
 			this.raiz.setNodoDer(nodo);
 		}else{
-			this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
-			this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
+			if(nodo.getNombreMedicamento()!=null)
+			{
+				this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
+			}
+			if(nodo.getNombreCompuesto()!=null)
+			{
+				this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
+			}
+		}
+	}
+
+	/**Agrega los nodos en el vector al arbol
+	 *@param nodos Los nodos a agregar al arbol*/
+	public void Agregar(Vector<Nodo> nodos)
+	{
+		int i;
+		for(i=0;i<nodos.size();i++)
+		{
+			this.Agregar(nodos.elementAt(i));
 		}
 	}
 
@@ -58,7 +83,10 @@ class ArbolNombres{
 	public Vector<Nodo> Nodos()
 	{
 		Vector<Nodo> vector=new Vector();
+		//debemos recorrer ambas partes del arbol ya que un nodo puede
+		//no tener un compuesto o puede no tener un medicamento.
 		this.Nodo(vector, this.raiz.getNodoIzq());
+		this.Nodo(vector, this.raiz.getNodoDer());
 		return vector;
 	}
 
