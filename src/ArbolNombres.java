@@ -29,18 +29,24 @@ class ArbolNombres{
 	 *@param nodo Un nodo que se quiera agregar al árbol ABB*/
 	public void Agregar(Nodo nodo)
 	{
-		if(this.raiz.getNodoIzq()==null && this.raiz.getNodoDer()==null)
+		if(nodo!=null)
 		{
-			this.raiz.setNodoIzq(nodo);
-			this.raiz.setNodoDer(nodo);
-		}else{
-			if(nodo.getNombreMedicamento()!=null)
+			if(this.raiz.getNodoIzq()==null)
 			{
-				this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
-			}
-			if(nodo.getNombreCompuesto()!=null)
-			{
-				this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
+				this.raiz.setNodoIzq(nodo);
+
+			}else if(this.raiz.getNodoDer()==null){
+
+				this.raiz.setNodoDer(nodo);
+			}else{
+				if(nodo.getNombreMedicamento()!=null)
+				{
+					this.agregar_medicamento(this.raiz.getNodoIzq(), nodo);
+				}
+				if(nodo.getNombreCompuesto()!=null)
+				{
+					this.agregar_compuesto(this.raiz.getNodoDer(), nodo);
+				}
 			}
 		}
 	}
@@ -54,6 +60,14 @@ class ArbolNombres{
 		{
 			this.Agregar(nodos.elementAt(i));
 		}
+	}
+
+	/**Elmina el nodo del arbol si no se encuentra lanza la excepcion
+	 * ArbolNombres_NoEncontrado
+	 * @param nodo El nodo a eliminar del arbol*/
+	public void Eliminar(Nodo nodo)
+	{
+		eliminar(this.raiz, nodo);
 	}
 
 	/**Busca la cadena en el árbol ABB considerando que cadena es un
@@ -137,10 +151,8 @@ class ArbolNombres{
 				agregar_compuesto(raiz.getNodoDer(), nodo);
 			}
 		}else{
-			//encontramos el mismo compuesto...lo
-			//modificamos?
-			//TODO
-			
+			//encontramos el mismo objeto, deberiamos utilizar
+			//modificar en vez de agregar
 		}
 	}
 
@@ -169,9 +181,8 @@ class ArbolNombres{
 				agregar_medicamento(raiz.getNodoDer(), nodo);
 			}
 		}else{
-			//encontramos el mismo medicamento...lo
-			//modificamos?
-			//TODO
+			//encontramos el mismo objeto, deberiamos utilizar
+			//modificar en vez de agregar
 		}
 	}
 
@@ -260,6 +271,55 @@ class ArbolNombres{
 			}
 			this.Nodo(vector, raiz.getNodoIzq());
 			this.Nodo(vector, raiz.getNodoDer());
+		}
+	}
+
+	/**Elimina el nodo dado del arbol
+	 * @param raiz La raiz del arbol del cual se va a eliminar el nodo
+	 * @param nodo El nodo que se quiere eliminar del arbol*/
+	private void eliminar(Nodo raiz, Nodo nodo)
+	{
+		Nodo subarbol_der, subarbol_izq;
+		if(raiz!=null)
+		{
+			if(raiz.getNodoIzq()==nodo)
+			{
+				subarbol_der=raiz.getNodoIzq().getNodoDer();
+				subarbol_izq=raiz.getNodoIzq().getNodoIzq();
+				raiz.setNodoIzq(null);
+				//debemos volver a agregar los elementos al arbol
+				Vector<Nodo> nodos=new Vector();
+
+				this.Nodo(nodos, subarbol_der);
+				this.Agregar(nodos);
+
+				nodos=new Vector();
+
+				this.Nodo(nodos, subarbol_izq);
+				this.Agregar(nodos);
+
+			}else{
+				this.eliminar(raiz.getNodoIzq(), nodo);
+			}
+
+			if(raiz.getNodoDer()==nodo)
+			{
+				subarbol_der=raiz.getNodoDer().getNodoDer();
+				subarbol_izq=raiz.getNodoDer().getNodoIzq();
+				raiz.setNodoDer(null);
+				//debemos volver a agregar los elementos al arbol
+				Vector<Nodo> nodos=new Vector();
+
+				this.Nodo(nodos, subarbol_der);
+				this.Agregar(nodos);
+
+				nodos=new Vector();
+
+				this.Nodo(nodos, subarbol_izq);
+				this.Agregar(nodos);
+			}else{
+				this.eliminar(raiz.getNodoDer(), nodo);
+			}
 		}
 	}
 }
