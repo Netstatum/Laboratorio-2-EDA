@@ -1,0 +1,15 @@
+nombre_medicamento = Aspirina
+nombre_compuesto = Acido
+sintomas = mareos,vomitos,asdf,
+
+nombre_medicamento = Acido de Baterias
+nombre_compuesto = Acido sulfurico
+
+nombre_medicamento = Chimmy Cherry
+nombre_compuesto = Cherry Changa
+sintomas = Friendship,
+
+nombre_medicamento = Lenguajes de programacion
+nombre_compuesto = Letras
+sintomas = LOLCode,C,c++,haskell,python,bash,php,java,
+
