@@ -68,14 +68,11 @@ class ArbolNombres{
 		{
 			throw new ArbolNombres_NoEncontrado("No hay ningún nodo en la base de datos");
 		}else{
-			Nodo nodo=this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
-			if(nodo==null)
-			{
-				//no encontramos la cadena ingresada como si
-				//fuera un compuesto. Tal vez un medicamento?
+			try{
+				return this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
+			}catch(ArbolNombres_NoEncontrado e){
+				//tratamos de buscarlo como un medicamento
 				return this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
-			}else{
-				return nodo;
 			}
 		}
 	}
@@ -101,14 +98,11 @@ class ArbolNombres{
 		{
 			throw new ArbolNombres_NoEncontrado("No hay nodos en la base de datos");
 		}else{
-			Nodo nodo=this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
-			if(nodo==null)
-			{
-				//no encontramos la cadena ingresada como si
-				//fuera un compuesto. Tal vez un medicamento?
+			try{
+				return this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
+			}catch(ArbolNombres_NoEncontrado e){
+				//intentamos buscandolo como compuesto
 				return this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
-			}else{
-				return nodo;
 			}
 		}
 	}
