@@ -23,7 +23,6 @@ public abstract class AVLAS{
 			K2.setSnodoIzq(K1.getSnodoDer());
 			K1.setSnodoDer(K2);
 			
-			
 			//calcular equilibrio
 			
 			return K1;
@@ -98,5 +97,11 @@ public abstract class AVLAS{
 		}
 		
 		return foco;
+	}
+	
+	public static Snodo AVLArbolSintomas(Snodo foco){
+		if(foco.getSnodo.Izq().getEquilibrio()==-2 || foco.getSnodo.Izq().getEquilibrio()==0){
+		//return 
+		}
 	}
 }
