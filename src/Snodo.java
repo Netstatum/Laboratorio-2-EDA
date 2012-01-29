@@ -71,14 +71,14 @@ public class Snodo{
 	*/
 	public void reemplazar(Snodo snodo){
 		this.setSintoma(snodo.getSintoma());
-		this.setCompuesto(snodo.getNombreCompuestos());
+		this.agregarCompuesto(snodo.getNombreCompuestos());
         this.setSnodoIzq(snodo.getSnodoIzq());
         this.setSnodoDer(snodo.getSnodoDer());
 	}
 	
 	public void igualar(Snodo snodo){
 		this.setSintoma(snodo.getSintoma());
-		this.setCompuesto(snodo.getNombreCompuestos());
+		this.agregarCompuesto(snodo.getNombreCompuestos());
         this.setSnodoIzq(snodo.getSnodoIzq());
         this.setSnodoDer(snodo.getSnodoDer());
 		this.setEquilibrio(snodo.getEquilibrio());
@@ -87,7 +87,7 @@ public class Snodo{
 	/**Limpia todos los atributos del objeto para que pueda ser eliminado por el GC*/
 	public void limpiar(){
 		this.setSintoma(null);
-		this.setCompuesto(null);
+		this.agregarCompuesto();
         this.setSnodoIzq(null);
         this.setSnodoDer(null);
 	}
@@ -104,6 +104,11 @@ public class Snodo{
 	*/
 	public void agregarCompuesto(Vector<String> nombre_compuestos){
 		this.nombre_compuestos=nombre_compuestos;
+	}
+        
+    /**Vuelve null la lista de compuestos*/
+	public void agregarCompuesto(){
+		this.nombre_compuestos=null;
 	}
 	
 	/**Retorna los compuestos que causan el sintoma del Snodo
@@ -179,8 +184,8 @@ public class Snodo{
 		return this.equilibrio;
 	}
 	
-	private void setEquiligrio(int equilibrio){
-		this.equilibrio = equilibrio
+	private void setEquilibrio(int equilibrio){
+		this.equilibrio = equilibrio;
 	}
 
 }
