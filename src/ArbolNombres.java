@@ -71,12 +71,13 @@ class ArbolNombres{
 			try{
 				return this.buscar_compuesto(this.raiz.getNodoDer(), cadena);
 			}catch(ArbolNombres_NoEncontrado e){
-				//tratamos de buscarlo como un medicamento
 				return this.buscar_medicamento(this.raiz.getNodoIzq(), cadena);
 			}
 		}
 	}
 
+	/**@return Devuelve un vector de todos los nodos que se encuentran en
+	 * este arbol*/
 	public Vector<Nodo> Nodos()
 	{
 		Vector<Nodo> vector=new Vector();
