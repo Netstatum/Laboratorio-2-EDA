@@ -160,32 +160,129 @@ public class Snodo{
 		return this.der;
 	}
 	
+	/**Suma un desequilibrio de 1 hacia la derecha*/
 	public void equilibrioDer(){
 		if(this.equilibrio!=2){
 			this.equilibrio += 1;
 		}
 	}
 	
+	/**Suma un desequilibrio dado hacia la derecha*/
 	public void equilibrioDer(int equilibrio){
 		this.equilibrio += equilibrio;
 	}
 	
+	/**Resta un desequilibrio de 1 hacia la izquierda*/
 	public void equilibrioIzq(){
 		if(this.equilibrio!=-2){
 			this.equilibrio -= 1;
 		}
 	}
 	
+	/**Resta un desequilibrio dado hacia la izquierda*/
 	public void equilibrioIzq(int equilibrio){
 		this.equilibrio -= equilibrio;
 	}
 	
+	/**Devueve el valor del equilibrio
+	   @return equilibrio : valor del equilibrio
+	*/
 	public int getEquilibrio(){
 		return this.equilibrio;
 	}
 	
+	/**Asigna un equilibrio al snodo
+	   @param equilibrio : valor que tomara el equilibrio
+	*/
 	private void setEquilibrio(int equilibrio){
 		this.equilibrio = equilibrio;
 	}
-
+	
+	/**Calcula el equilibrio del nodo, este resultado sera:
+	   -2 : cuando tiene más nodos a la izq que a la derecha, puede haber error al agregar otro a la izquierda
+	   -1 : cuando tiene un nodo más a la izq que a la derecha
+	    0 : cuando hay la misma cantidad de nodos a la derecha que a la izquierda, por lo que puede haber un error en la siguiente inserción
+	    1 : cuando tiene un nodo más a la derecha que a la izquierda
+	    2 : cuando tiene más nodos a la der que a la izquierda, puede haber error al agregar otro a la derecha
+	   @return Retorna el equilibrio actual del Snodo
+	*/
+	public int calcularEquilibrio(){
+		int izq=0;
+		int der=0;
+		int resultado=0;
+	
+		if(this.getSnodoIzq==null){
+			der = this.sumaHijos();
+		}else if(this.getSnodoDer==null){
+			izq = this.sumaHijos();
+		}else{
+			der = this.sumaHijos();
+			izq = this.sumaHijos();
+		}
+		
+		resultado = der-izq;
+		
+		if(resultado>2){
+			return 2;
+		}else if(resultado<-2){
+			return -2;
+		}else{
+			return resultado;
+		}
+	}
+	
+	/**Suma todos los descendientes de un Snodo
+	   @return la cantidad de descendiente que tiene el Snodo
+	*/
+	private int sumaHijos(){
+		int sumai=0;
+		int sumad=0;
+	
+		if(this.getSnodoIzq!=null){
+			sumai = (1+this.getSnodoIzq.sumaHijos());
+		}
+		
+		if(this.getSnodoDer!=null){
+			sumad = (1+this.getSnodoDer.sumaHijos());
+		}
+		
+		sumad += sumai;
+		
+		return sumad;
+	}
+	
+	/**Calcula la diferencia de las alturas, entre la altura del lado derecho y el izquierdo
+	   @return Retorna la diferencia entre las alturas
+	*/
+	public int calcularDA(){
+		int izq=0;
+		int der=0;
+		int resultado=0;
+	
+		if(this.getSnodoIzq==null){
+			der = this.altura(this.getSnodoDer);
+		}else if(this.getSnodoDer==null){
+			izq = this.altura(this.getSnodoIzq);
+		}else{
+			der = this.altura(this.getSnodoDer);
+			izq = this.altura(this.getSnodoIzq);
+		}
+		
+		resultado = der-izq;
+		
+		return resultado;
+	}
+	/**Calcula la altura maxima de un snodo
+	   @param snodo : snodo al que se le calculara la altura
+	   @return Retorna un entero del valor de la altura maxima
+	*/
+	private int altura(Snodo snodo){
+		int suma=0;
+	
+		if(snodo==null){
+			return 0;
+		}else{
+			return (1+Math.max(snodo.altura(snodo.getSnodoIzq()),snodo.altura(snodo.getSnodoDer())));
+		}
+	}
 }
