@@ -1,8 +1,8 @@
-class AVLAS{
-	Snodo K1;
-	Snodo K2;
-	Snodo K3;
-	
+public abstract class AVLAS{
+	private static Snodo K1;
+	private static Snodo K2;
+	private static Snodo K3;
+        
 	private static Snodo RSI(Snodo foco){		
 		if(foco.getSnodoIzq().getEquilibrio()==-2){
 			K2.igualar(foco.getSnodoIzq());
