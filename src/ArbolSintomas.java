@@ -1,7 +1,7 @@
 /** @class ArbolSintomas :
-	Esta clase implementa un Árbol binario de búsqueda (ABB) ordenado respecto a los sintomas.
+	Esta clase implementa un ?rbol binario de b?squeda (ABB) ordenado respecto a los sintomas.
 	Los siguientes parametros representan los atributos de la clase:
-	@param raiz : Snodo raiz del Árbol ABB
+	@param raiz : Snodo raiz del ?rbol ABB
 */
 
 import java.util.Vector;
@@ -9,15 +9,15 @@ import java.util.Vector;
 class ArbolSintomas{
 	private Snodo raiz;
 	
-	/**Incializa el ÁrbolSintomas con una raiz nula*/
+	/**Incializa el ?rbolSintomas con una raiz nula*/
 	public ArbolSintomas(){
 		raiz = new Snodo();
 	}
 	
-	/**Agrega un nodo al arbol, si no existen Snodos o más bien, si el nodo raiz no tiene datos asignados
-	entonces el Snodo a agregar será la raiz.
+	/**Agrega un nodo al arbol, si no existen Snodos o m?s bien, si el nodo raiz no tiene datos asignados
+	entonces el Snodo a agregar ser? la raiz.
 	Despues de agregar el Snodola funcion AVL verificara que el arbol tenga una estructura AVL,
-	de no ser asi AVL intentará arreglarlo
+	de no ser asi AVL intentar? arreglarlo
 	@param snodo : Snodo que se desea agregar al Arbol ABB
 	*/
 	public void agregarSnodo(Snodo snodo){	
@@ -40,13 +40,13 @@ class ArbolSintomas{
 		
 		if(comparacion<0){
 			if(raiz.getSnodoIzq()==null){
-				raiz.setSnodoIzq(snodo)
+				raiz.setSnodoIzq(snodo);
 			}else{
 				agregarSintoma(raiz.getSnodoIzq(),snodo);
 			}
 		}else if(comparacion>0){
 			if(raiz.getSnodoDer()==null){
-				raiz.setSnodoDer(snodo)
+				raiz.setSnodoDer(snodo);
 			}else{
 				agregarSintoma(raiz.getSnodoDer(),snodo);
 			}
