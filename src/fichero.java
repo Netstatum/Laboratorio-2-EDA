@@ -5,6 +5,7 @@ import java.io.*;
 
 class Fichero{
 	
+	/**Nombre el fichero a leer o escribir*/
 	String nombre;
 
 	/**Inicia la clase para leer y escribir en el archivo por defecto
