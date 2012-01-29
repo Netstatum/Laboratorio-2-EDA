@@ -1,0 +1,8 @@
+LOS PROGRAMAS QUE SE ENCUENTRAN EN ESTA CARPETA SON ANEXOS, NO NECESARIAMENTE
+SON PARTE DEL LO QUE PIDEN EN EL LABORATORIO
+
+Aquí se encuentran algunos programas útiles para probar, por ejemplo, la base de
+datos y que tan eficiente es al tratar con datos grandes.
+
+test_db.py: Crea una base de datos de tamaño indicado para ser probada en el
+programa (Requiere python)
