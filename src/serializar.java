@@ -168,14 +168,14 @@ class Serializar{
 						//encontramos una variable
 						//nombre_medicamento, la agregamos al
 						//nodo
-						nodo.setNombreMedicamento(asignacion[1]);
+						nodo.setNombreMedicamento(valor);
 
 					}else if(variable.equalsIgnoreCase("nombre_compuesto")){
 
 						//encontramos una variable
 						//nombre_compuesto, la agregamos al
 						//nodo
-						nodo.setNombreCompuesto(asignacion[1]);
+						nodo.setNombreCompuesto(valor);
 
 					}else if(variable.equalsIgnoreCase("sintomas")){
 
