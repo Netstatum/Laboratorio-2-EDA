@@ -1,4 +1,4 @@
-import java.util.Vector;
+ï»¿import java.util.Vector;
 /** @class Snodo : 
 	Esta Clase guarda todos los compuestos que pueden provocar un sintoma especifico asociado al Snodo.
 	Los siguientes parametros representan los atributos de la clase:
@@ -194,16 +194,16 @@ public class Snodo{
 	/**Asigna un equilibrio al snodo
 	   @param equilibrio : valor que tomara el equilibrio
 	*/
-	private void setEquilibrio(int equilibrio){
+	public void setEquilibrio(int equilibrio){
 		this.equilibrio = equilibrio;
 	}
 	
 	/**Calcula el equilibrio del nodo, este resultado sera:
-	   -2 : cuando tiene más nodos a la izq que a la derecha, puede haber error al agregar otro a la izquierda
-	   -1 : cuando tiene un nodo más a la izq que a la derecha
-	    0 : cuando hay la misma cantidad de nodos a la derecha que a la izquierda, por lo que puede haber un error en la siguiente inserción
-	    1 : cuando tiene un nodo más a la derecha que a la izquierda
-	    2 : cuando tiene más nodos a la der que a la izquierda, puede haber error al agregar otro a la derecha
+	   -2 : cuando tiene mï¿½s nodos a la izq que a la derecha, puede haber error al agregar otro a la izquierda
+	   -1 : cuando tiene un nodo mï¿½s a la izq que a la derecha
+	    0 : cuando hay la misma cantidad de nodos a la derecha que a la izquierda, por lo que puede haber un error en la siguiente inserciï¿½n
+	    1 : cuando tiene un nodo mï¿½s a la derecha que a la izquierda
+	    2 : cuando tiene mï¿½s nodos a la der que a la izquierda, puede haber error al agregar otro a la derecha
 	   @return Retorna el equilibrio actual del Snodo
 	*/
 	public int calcularEquilibrio(){
@@ -211,9 +211,9 @@ public class Snodo{
 		int der=0;
 		int resultado=0;
 	
-		if(this.getSnodoIzq==null){
+		if(this.getSnodoIzq()==null){
 			der = this.sumaHijos();
-		}else if(this.getSnodoDer==null){
+		}else if(this.getSnodoDer()==null){
 			izq = this.sumaHijos();
 		}else{
 			der = this.sumaHijos();
@@ -238,12 +238,12 @@ public class Snodo{
 		int sumai=0;
 		int sumad=0;
 	
-		if(this.getSnodoIzq!=null){
-			sumai = (1+this.getSnodoIzq.sumaHijos());
+		if(this.getSnodoIzq()!=null){
+			sumai = (1+this.getSnodoIzq().sumaHijos());
 		}
 		
-		if(this.getSnodoDer!=null){
-			sumad = (1+this.getSnodoDer.sumaHijos());
+		if(this.getSnodoDer()!=null){
+			sumad = (1+this.getSnodoDer().sumaHijos());
 		}
 		
 		sumad += sumai;
@@ -259,13 +259,13 @@ public class Snodo{
 		int der=0;
 		int resultado=0;
 	
-		if(this.getSnodoIzq==null){
-			der = this.altura(this.getSnodoDer);
-		}else if(this.getSnodoDer==null){
-			izq = this.altura(this.getSnodoIzq);
+		if(this.getSnodoIzq()==null){
+			der = this.altura(this.getSnodoDer());
+		}else if(this.getSnodoDer()==null){
+			izq = this.altura(this.getSnodoIzq());
 		}else{
-			der = this.altura(this.getSnodoDer);
-			izq = this.altura(this.getSnodoIzq);
+			der = this.altura(this.getSnodoDer());
+			izq = this.altura(this.getSnodoIzq());
 		}
 		
 		resultado = der-izq;
