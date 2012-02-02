@@ -35,6 +35,10 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        toxicoIngresado = new javax.swing.JTextField();
+        sintomaIngresado = new javax.swing.JTextField();
+        medicamentoIngresado = new javax.swing.JTextField();
+        Guardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -50,6 +54,39 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
         jLabel3.setBounds(40, 230, 180, 40);
         jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        toxicoIngresado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toxicoIngresadoActionPerformed(evt);
+            }
+        });
+        toxicoIngresado.setBounds(40, 90, 180, 20);
+        jDesktopPane1.add(toxicoIngresado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        sintomaIngresado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sintomaIngresadoActionPerformed(evt);
+            }
+        });
+        sintomaIngresado.setBounds(40, 190, 180, 20);
+        jDesktopPane1.add(sintomaIngresado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        medicamentoIngresado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicamentoIngresadoActionPerformed(evt);
+            }
+        });
+        medicamentoIngresado.setBounds(40, 290, 180, 20);
+        jDesktopPane1.add(medicamentoIngresado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Guardar.setText("Guardar");
+        Guardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuardarActionPerformed(evt);
+            }
+        });
+        Guardar.setBounds(290, 310, 80, 23);
+        jDesktopPane1.add(Guardar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -58,11 +95,32 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void toxicoIngresadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toxicoIngresadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_toxicoIngresadoActionPerformed
+
+    private void sintomaIngresadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sintomaIngresadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sintomaIngresadoActionPerformed
+
+    private void medicamentoIngresadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamentoIngresadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicamentoIngresadoActionPerformed
+
+    private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
+//Aqui debe ir
+//Variable toxico=toxicoIngresado.getText();
+//Variable sintoma=sintomaIngresado.getText();
+//Variable medicamento=meicamentoIngresado.getText();
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuardarActionPerformed
 
     /**
     * @param args the command line arguments
@@ -76,10 +134,14 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Guardar;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField medicamentoIngresado;
+    private javax.swing.JTextField sintomaIngresado;
+    private javax.swing.JTextField toxicoIngresado;
     // End of variables declaration//GEN-END:variables
 
 }
