@@ -1,4 +1,4 @@
-﻿import java.util.Vector;
+import java.util.Vector;
 /** @class Snodo : 
 	Esta Clase guarda todos los compuestos que pueden provocar un sintoma especifico asociado al Snodo.
 	Los siguientes parametros representan los atributos de la clase:

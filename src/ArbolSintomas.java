@@ -1,4 +1,4 @@
-﻿/** @class ArbolSintomas :
+/** @class ArbolSintomas :
 	Esta clase implementa un ?rbol binario de b?squeda (ABB) ordenado respecto a los sintomas.
 	Los siguientes parametros representan los atributos de la clase:
 	@param raiz : Snodo raiz del Arbol ABB

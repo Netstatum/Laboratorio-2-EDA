@@ -1,4 +1,4 @@
-﻿/** @class AVLA :
+/** @class AVLA :
     Esta clase abrstracta permite usar un metodo para organizar un arbol ABB de forma AVL cuando se esta implementando un nodo a la vez
 	Los siguientes parametros representan los atributos de la clase:
 	@param Snodo K1 : Representa un nodo auxiliar

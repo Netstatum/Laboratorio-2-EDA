@@ -1,5 +1,3 @@
-package Interno;
-
 import java.util.Vector;
 
 class Nodo{
