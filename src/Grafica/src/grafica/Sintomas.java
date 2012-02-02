@@ -33,12 +33,31 @@ public class Sintomas extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        sintomasIngresados = new javax.swing.JTextField();
+        buscarSolucion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ingrese2.jpg"))); // NOI18N
-        jLabel1.setBounds(130, 20, 139, 40);
+        jLabel1.setBounds(30, 20, 139, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        sintomasIngresados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sintomasIngresadosActionPerformed(evt);
+            }
+        });
+        sintomasIngresados.setBounds(30, 80, 310, 20);
+        jDesktopPane1.add(sintomasIngresados, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        buscarSolucion.setText("Buscar Solucion");
+        buscarSolucion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarSolucionActionPerformed(evt);
+            }
+        });
+        buscarSolucion.setBounds(120, 120, 130, 23);
+        jDesktopPane1.add(buscarSolucion, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,6 +73,14 @@ public class Sintomas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void sintomasIngresadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sintomasIngresadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sintomasIngresadosActionPerformed
+
+    private void buscarSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarSolucionActionPerformed
+        // Variable sintomas ingresados=sintomasIngresados.getText();
+    }//GEN-LAST:event_buscarSolucionActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -66,8 +93,10 @@ public class Sintomas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buscarSolucion;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField sintomasIngresados;
     // End of variables declaration//GEN-END:variables
 
 }

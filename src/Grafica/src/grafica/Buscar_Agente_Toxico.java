@@ -33,6 +33,8 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        agentetoxicobuscado = new javax.swing.JTextField();
+        Buscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -40,6 +42,23 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Buscar agente toxico2.jpg"))); // NOI18N
         jLabel1.setBounds(30, 30, 330, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        agentetoxicobuscado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agentetoxicobuscadoActionPerformed(evt);
+            }
+        });
+        agentetoxicobuscado.setBounds(30, 90, 200, 20);
+        jDesktopPane1.add(agentetoxicobuscado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Buscar.setText("Buscar");
+        Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarActionPerformed(evt);
+            }
+        });
+        Buscar.setBounds(30, 130, 90, 23);
+        jDesktopPane1.add(Buscar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,6 +74,14 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+    //Variable toxico a buscar=agentetoxicobuscado.getText();
+    }//GEN-LAST:event_BuscarActionPerformed
+
+    private void agentetoxicobuscadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agentetoxicobuscadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_agentetoxicobuscadoActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -67,6 +94,8 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Buscar;
+    private javax.swing.JTextField agentetoxicobuscado;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

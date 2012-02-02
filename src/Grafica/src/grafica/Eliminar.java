@@ -33,6 +33,8 @@ public class Eliminar extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
+        toxicoEliminado = new javax.swing.JTextField();
+        Eliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -40,6 +42,23 @@ public class Eliminar extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jLabel1.setBounds(20, 30, 345, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        toxicoEliminado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toxicoEliminadoActionPerformed(evt);
+            }
+        });
+        toxicoEliminado.setBounds(20, 80, 160, 20);
+        jDesktopPane1.add(toxicoEliminado, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Eliminar.setText("Eliminar");
+        Eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarActionPerformed(evt);
+            }
+        });
+        Eliminar.setBounds(160, 120, 90, 23);
+        jDesktopPane1.add(Eliminar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,11 +68,19 @@ public class Eliminar extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
+        // //Variable toxico a eliminar=toxicoEliminado.getText();
+    }//GEN-LAST:event_EliminarActionPerformed
+
+    private void toxicoEliminadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toxicoEliminadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_toxicoEliminadoActionPerformed
 
     /**
     * @param args the command line arguments
@@ -67,8 +94,10 @@ public class Eliminar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Eliminar;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField toxicoEliminado;
     // End of variables declaration//GEN-END:variables
 
 }
