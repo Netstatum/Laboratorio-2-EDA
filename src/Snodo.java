@@ -18,7 +18,7 @@ public class Snodo{
 	/**Inicializa un nodo con valores nulos*/
     public Snodo() {
         this.sintoma=null;
-		this.nombre_compuestos=new Vector();;
+        this.nombre_compuestos=new Vector();
 		
         this.izq=null;
         this.der=null;
@@ -31,7 +31,7 @@ public class Snodo{
 	*/
     public Snodo(String sintoma){
         this.sintoma=sintoma;
-		this.nombre_compuestos = new Vector();;
+        this.nombre_compuestos = new Vector();
 		
         this.izq=null;
         this.der=null;
@@ -207,20 +207,20 @@ public class Snodo{
 	   @return Retorna el equilibrio actual del Snodo
 	*/
 	public int calcularEquilibrio(){
-		int izq=0;
-		int der=0;
-		int resultado=0;
+		int izquierda = 0;
+		int derecha = 0;
+		int resultado = 0;
 	
 		if(this.getSnodoIzq()==null){
-			der = this.sumaHijos();
+			derecha = this.sumaHijos();
 		}else if(this.getSnodoDer()==null){
-			izq = this.sumaHijos();
+			izquierda = this.sumaHijos();
 		}else{
-			der = this.sumaHijos();
-			izq = this.sumaHijos();
+			derecha = this.sumaHijos();
+			izquierda = this.sumaHijos();
 		}
 		
-		resultado = der-izq;
+		resultado = derecha-izquierda;
 		
 		if(resultado>2){
 			return 2;
@@ -255,20 +255,20 @@ public class Snodo{
 	   @return Retorna la diferencia entre las alturas
 	*/
 	public int calcularDA(){
-		int izq=0;
-		int der=0;
+		int izquierda=0;
+		int derecha=0;
 		int resultado=0;
 	
 		if(this.getSnodoIzq()==null){
-			der = this.altura(this.getSnodoDer());
+			derecha = this.altura(this.getSnodoDer());
 		}else if(this.getSnodoDer()==null){
-			izq = this.altura(this.getSnodoIzq());
+			izquierda = this.altura(this.getSnodoIzq());
 		}else{
-			der = this.altura(this.getSnodoDer());
-			izq = this.altura(this.getSnodoIzq());
+			derecha = this.altura(this.getSnodoDer());
+			izquierda = this.altura(this.getSnodoIzq());
 		}
 		
-		resultado = der-izq;
+		resultado = derecha-izquierda;
 		
 		return resultado;
 	}
