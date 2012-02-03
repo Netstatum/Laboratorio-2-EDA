@@ -86,6 +86,9 @@ class ArbolSintomas{
 		Vector<Snodo> vector=new Vector();
 		//debemos recorrer ambas partes del arbol ya que un nodo puede
 		//no tener un compuesto o puede no tener un medicamento.
+
+		//debemos agregar el nodo raiz tambien al vector
+		vector.add(this.raiz);
 		this.VSnodo(vector, this.raiz.getSnodoIzq());
 		this.VSnodo(vector, this.raiz.getSnodoDer());
 		return vector;
