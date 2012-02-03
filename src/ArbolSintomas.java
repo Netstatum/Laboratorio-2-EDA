@@ -45,8 +45,7 @@ class ArbolSintomas{
 		for(int i=0;i<snodos.size();i++)
 		{
 			this.agregarSnodo(snodos.elementAt(i));
-		}		
-		
+		}			
 	}
 	
 	/**Agrega el snodo al lugar correspondiente segun un orden alfabetico dado por el nombre del sintoma,
@@ -186,6 +185,17 @@ class ArbolSintomas{
                 return null;
 			}
 		}
+	}
+	
+	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas){
+		Vector<Snodo> snodos = new Vector();
+	
+		for(int i=0;i<sintomas.size();i++)
+		{
+			snodos.add(this.BuscarSintoma(sintomas.elementAt(i)));
+		}
+		
+		return snodos;		
 	}
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario dado, si no se encuentra entonces se lanza una excepción
