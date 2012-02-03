@@ -180,10 +180,10 @@ class ArbolSintomas{
 			throw new ArbolSintomasNoEncontrado("No hay ningún nodo en la base de datos");
 		}else{
 			try{			
-				return this.buscarSintoma(this.raiz.getSnodoDer(), cadena);
+				return this.BuscarSintoma(this.raiz, cadena);
 			}catch(ArbolSintomasNoEncontrado e){
 				System.out.println("No se encontró "+cadena+" en la base de datos");
-                                return this.raiz;
+                return null;
 			}
 		}
 	}
@@ -193,7 +193,7 @@ class ArbolSintomas{
 	   @param raiz Raíz del árbol binario en donde buscar la cadena.
 	   @param cadena Un string a buscar en el árbol binario se ignoran las mayúsculas
 	*/
-	private Snodo buscarSintoma(Snodo raiz, String cadena)throws ArbolSintomasNoEncontrado
+	private Snodo BuscarSintoma(Snodo raiz, String cadena)throws ArbolSintomasNoEncontrado
 	{
 		if(raiz==null)
 		{
@@ -213,9 +213,9 @@ class ArbolSintomas{
 
 				if(compuesto<0)
 				{
-					return buscarSintoma(raiz.getSnodoIzq(), cadena);
+					return BuscarSintoma(raiz.getSnodoIzq(), cadena);
 				}else{
-					return buscarSintoma(raiz.getSnodoDer(), cadena);
+					return BuscarSintoma(raiz.getSnodoDer(), cadena);
 				}
 			}
 		}
