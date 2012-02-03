@@ -12,16 +12,18 @@ class Fichero{
 
 	/**Inicia la clase para leer y escribir en el archivo por defecto
 	 * "database.txt"*/
-	Fichero()
+	Fichero()throws IOException
 	{
 		this.nombre="database.txt";
+		this.Leer();
 	}
 
 	/**Inicia la clase para leer y escribir en el archivo dado
 	 * @param fichero Archivo en el cual vamos a leer y escribir*/
-	Fichero(File fichero)
+	Fichero(File fichero)throws IOException
 	{
 		this.nombre=fichero.getPath();
+		this.Leer();
 	}
 
 	/**Escribe los nodos que hay en el arbol dado en el archivo
@@ -56,7 +58,10 @@ class Fichero{
 	/**@return Devuelve un ArbolSintomas a partir del fichero leido*/
 	public ArbolSintomas ArbolSintomas()
 	{
-
+		if(serializar==null)
+		{
+			System.out.println("Hola");
+		}
 		return this.serializar.ArbolSintomas();
 	}
 }
