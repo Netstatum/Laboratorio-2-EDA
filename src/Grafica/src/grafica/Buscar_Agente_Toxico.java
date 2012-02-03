@@ -76,7 +76,7 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
 
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
     //Variable toxico a buscar=agentetoxicobuscado.getText();
-    }//GEN-LAST:event_BuscarActionPerformed
+    }
 
     private void agentetoxicobuscadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agentetoxicobuscadoActionPerformed
         // TODO add your handling code here:
