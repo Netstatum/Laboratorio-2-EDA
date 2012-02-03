@@ -1,4 +1,6 @@
-all: interfaz-grafica
+all: cli interfaz-grafica
+
+cli:
 	javac *.java
 
 
