@@ -7,6 +7,8 @@ class Fichero{
 	
 	/**Nombre el fichero a leer o escribir*/
 	String nombre;
+	String contenido;
+	Serializar serializar;
 
 	/**Inicia la clase para leer y escribir en el archivo por defecto
 	 * "database.txt"*/
@@ -33,14 +35,28 @@ class Fichero{
 
 	/**Lee el archivo y crea un ArbolNombres a partir del contenido
 	 * @return El arbol creado a partir del archivo*/
-	public ArbolNombres Leer()throws IOException
+	public void Leer()throws IOException
 	{
 		byte[] buffer = new byte[(int) new File(this.nombre).length()];
 		FileInputStream f = new FileInputStream(this.nombre);
 		f.read(buffer);
-		String contenido=new String(buffer);
+		this.contenido=new String(buffer);
 
-		Serializar serializar=new Serializar(contenido);
-		return new ArbolNombres(serializar.Nodos());
+		this.serializar=new Serializar(this.contenido);
+
+	}
+
+	/**Lee el archivo y crea un ArbolNombres a partir del contenido
+	 * @return El arbol creado a partir del archivo*/
+	public ArbolNombres ArbolNombres()
+	{
+		return new ArbolNombres(this.serializar.Nodos());
+	}
+	
+	/**@return Devuelve un ArbolSintomas a partir del fichero leido*/
+	public ArbolSintomas ArbolSintomas()
+	{
+
+		return this.serializar.ArbolSintomas();
 	}
 }
