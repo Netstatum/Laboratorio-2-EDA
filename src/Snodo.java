@@ -17,8 +17,8 @@ public class Snodo{
     
 	/**Inicializa un nodo con valores nulos*/
     public Snodo() {
-        this.sintoma=null;
-        this.nombre_compuestos=null;
+        this.sintoma="none";
+        this.nombre_compuestos=new Vector();
 		
         this.izq=null;
         this.der=null;
@@ -68,6 +68,7 @@ public class Snodo{
 	
 	/** Reemplaza todo los valores del nodo por uno nuevo
 		SOLO USAR SI AMBOS SNODOS SON IGUALES
+		@param snodo : nodo que reemplazara al acutal
 	*/
 	public void reemplazar(Snodo snodo){
 		this.setSintoma(snodo.getSintoma());
@@ -76,6 +77,9 @@ public class Snodo{
         this.setSnodoDer(snodo.getSnodoDer());
 	}
 	
+	/** Iguala un nodo a otro
+		@param snodo : nodo que reemplazara al actual
+	*/
 	public void igualar(Snodo snodo){
 		this.setSintoma(snodo.getSintoma());
 		this.agregarCompuesto(snodo.getNombreCompuestos());

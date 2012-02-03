@@ -29,7 +29,7 @@ class ArbolSintomas{
 	@param snodo : Snodo que se desea agregar al Arbol ABB
 	*/
 	public void agregarSnodo(Snodo snodo){	
-		if(this.raiz.getSintoma()==null){
+		if(this.raiz.getSintoma()=="none"){
 			this.raiz.igualar(snodo);
 		}else{
 			this.raiz.igualar(this.agregarSintoma(this.raiz,snodo));
@@ -41,10 +41,7 @@ class ArbolSintomas{
 	/**Agrega una serie de snodos de forma recursiva
 		@param snodos : lista de nodos a agregar
 	*/
-	public void agregarSnodo(Vector<Snodo> snodos){	
-	
-		//this.raiz.igualar(snodos.elementAt(0));
-	
+	public void agregarSnodo(Vector<Snodo> snodos){		
 		for(int i=0;i<snodos.size();i++)
 		{
 			this.agregarSnodo(snodos.elementAt(i));
