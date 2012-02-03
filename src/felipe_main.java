@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class main{
+public class felipe_main{
 
 	public static void main(String[] args)throws IOException, ArbolNombres_NoEncontrado
 	{
