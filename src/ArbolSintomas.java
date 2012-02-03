@@ -42,6 +42,9 @@ class ArbolSintomas{
 		@param snodos : lista de nodos a agregar
 	*/
 	public void agregarSnodo(Vector<Snodo> snodos){	
+	
+		//this.raiz.igualar(snodos.elementAt(0));
+	
 		for(int i=0;i<snodos.size();i++)
 		{
 			this.agregarSnodo(snodos.elementAt(i));
@@ -70,7 +73,7 @@ class ArbolSintomas{
 				raiz.setSnodoDer(agregarSintoma(raiz.getSnodoDer(),snodo));
 			}
 		}else{
-			snodo.reemplazar(raiz);			
+			snodo.reemplazar(raiz);		
 			raiz.limpiar();
 			return snodo;
 		}

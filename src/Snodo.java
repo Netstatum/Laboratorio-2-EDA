@@ -18,7 +18,7 @@ public class Snodo{
 	/**Inicializa un nodo con valores nulos*/
     public Snodo() {
         this.sintoma=null;
-        this.nombre_compuestos=new Vector();
+        this.nombre_compuestos=null;
 		
         this.izq=null;
         this.der=null;
