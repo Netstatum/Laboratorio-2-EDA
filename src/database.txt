@@ -7,7 +7,7 @@ nombre_compuesto = Acido sulfurico
 
 nombre_medicamento = Chimmy Cherry
 nombre_compuesto = Cherry Changa
-sintomas = Friendship,
+sintomas = Friendship,mareos,vomitos
 
 nombre_medicamento = Lenguajes de programacion
 nombre_compuesto = Letras
