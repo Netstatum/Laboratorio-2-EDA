@@ -57,12 +57,6 @@ class Serializar{
 			this.buscar_agrear_snodo(snodos, this.nodos.elementAt(i));
 		}
 		
-		for(i=0;i<snodos.size();i++)
-		{
-
-			//System.out.println(snodos.elementAt(i).getSintoma());
-		}
-
 		return new ArbolSintomas(snodos);
 
 	}
@@ -294,7 +288,7 @@ class Serializar{
 			encontrado=false;
 			for(i=0;i<snodos.size();i++)
 			{
-				if(nodo.getSintomas().elementAt(j).compareToIgnoreCase(snodos.elementAt(i).getSintoma())==0)
+				if(nodo.getSintomas().elementAt(j).equalsIgnoreCase(snodos.elementAt(i).getSintoma()))
 				{
 					//debemos agregar este nodo al sintoma
 					if(nodo.getNombreMedicamento()!="")
