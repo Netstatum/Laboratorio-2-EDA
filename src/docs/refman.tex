@@ -1,0 +1,63 @@
+\documentclass[letterpaper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+
+%inicio del numerado
+\setcounter{page}{100}
+
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathptmx}
+
+\usepackage[scaled=.90]{times}
+
+%espaciado
+\usepackage{setspace}
+\singlespacing
+
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+
+\begin{document}
+\chapter*{\-Documentación de las clases}
+\input{classArbolNombres}
+\input{classArbolNombres__NoEncontrado}
+\input{classArbolSintomas}
+\input{classArbolSintomasNoEncontrado}
+\input{classAVLA}
+\input{classAVLAS}
+\input{classFichero}
+\input{classNodo}
+\input{classSerializar}
+\input{classSnodo}
+\end{document}
