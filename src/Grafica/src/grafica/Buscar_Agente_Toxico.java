@@ -74,7 +74,7 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
                 ingresaMedicamentoActionPerformed(evt);
             }
         });
-        ingresaMedicamento.setBounds(30, 180, 6, 20);
+        ingresaMedicamento.setBounds(30, 180, 200, 20);
         jDesktopPane1.add(ingresaMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
