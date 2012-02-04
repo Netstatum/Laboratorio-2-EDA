@@ -4,6 +4,7 @@
  */
 
 package grafica;
+import package interno;
 
 import java.awt.*;
 import javax.swing.*;

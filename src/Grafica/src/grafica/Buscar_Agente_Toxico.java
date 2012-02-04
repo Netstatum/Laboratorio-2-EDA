@@ -31,10 +31,15 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         agentetoxicobuscado = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        ingresaMedicamento = new javax.swing.JTextField();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -57,8 +62,20 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
                 BuscarActionPerformed(evt);
             }
         });
-        Buscar.setBounds(30, 130, 90, 23);
+        Buscar.setBounds(30, 230, 90, 23);
         jDesktopPane1.add(Buscar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel3.setText("Escriba el medicamento que desea buscar");
+        jLabel3.setBounds(30, 140, 230, 14);
+        jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        ingresaMedicamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ingresaMedicamentoActionPerformed(evt);
+            }
+        });
+        ingresaMedicamento.setBounds(30, 180, 6, 20);
+        jDesktopPane1.add(ingresaMedicamento, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -74,13 +91,17 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {                                       
     //Variable toxico a buscar=agentetoxicobuscado.getText();
     }
 
     private void agentetoxicobuscadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agentetoxicobuscadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_agentetoxicobuscadoActionPerformed
+
+    private void ingresaMedicamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresaMedicamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ingresaMedicamentoActionPerformed
 
     /**
     * @param args the command line arguments
@@ -96,8 +117,11 @@ public class Buscar_Agente_Toxico extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buscar;
     private javax.swing.JTextField agentetoxicobuscado;
+    private javax.swing.JTextField ingresaMedicamento;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 }
