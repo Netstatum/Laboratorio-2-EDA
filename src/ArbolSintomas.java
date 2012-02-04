@@ -239,7 +239,7 @@ class ArbolSintomas{
 	*/
 	public Vector<String> mejorSolucion(Vector<Snodo> snodos){
 		Vector<String> all,repetido,mejores;
-		Vector<int> repeticiones;
+		Vector<Integer> repeticiones;
 		String comparador;
 		int repetidor,i,j;
 		
@@ -257,8 +257,8 @@ class ArbolSintomas{
 		
 		//Se agregan todos los compuestos a un solo vector, no importa si se repiten
 		for(i=0;i<snodos.size();i++){
-			for(j=0;j<snodos.elementAt(i).nombre_compuestos.size();j++){
-				all.add(snodos.elementAt(i).nombre_compuestos.elementAt(j));
+			for(j=0;j<snodos.elementAt(i).getNombreCompuestos().size();j++){
+				all.add(snodos.elementAt(i).getNombreCompuestos().elementAt(j));
 			}			
 		}
 		
@@ -272,7 +272,7 @@ class ArbolSintomas{
 			if(!repetido.contains(comparador)){
 				for(j=i+1;j<all.size();j++){
 					//Se suma la veces que se repite
-					if(all.elementAt(j).equalIgnoreCase(comparador)){
+					if(all.elementAt(j).equalsIgnoreCase(comparador)){
 						repetidor++;
 					}
 				}
