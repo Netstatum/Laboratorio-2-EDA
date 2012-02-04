@@ -58,10 +58,6 @@ class Fichero{
 	/**@return Devuelve un ArbolSintomas a partir del fichero leido*/
 	public ArbolSintomas ArbolSintomas()
 	{
-		if(serializar==null)
-		{
-			System.out.println("Hola");
-		}
 		return this.serializar.ArbolSintomas();
 	}
 }
