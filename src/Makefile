@@ -29,3 +29,5 @@ clear:
 	rm -r docs
 doc:
 	doxygen documentacion.cfg
+	cp docs/refman.tex docs/doxygen/latex
+	cp docs/doxygen.sty docs/doxygen/latex
