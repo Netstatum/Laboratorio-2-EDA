@@ -187,7 +187,7 @@ class ArbolSintomas{
 		}
 	}
 	
-	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas){
+	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas)throws ArbolSintomasNoEncontrado{
 		Vector<Snodo> snodos = new Vector();
 	
 		for(int i=0;i<sintomas.size();i++)
@@ -304,7 +304,7 @@ class ArbolSintomas{
 					mejores.clear();
 				//Si hay unos con la misma cantidad de repeticiones se añada al array mejores
 				}else if(repeticiones.elementAt(j)==repetidor){
-					mejores.add(repetido.elementAt(j);
+					mejores.add(repetido.elementAt(j));
 				}
 			}
 
