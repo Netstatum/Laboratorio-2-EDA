@@ -1,4 +1,4 @@
-﻿/** @class ArbolSintomas :
+/** @class ArbolSintomas :
 	Esta clase implementa un ?rbol binario de b?squeda (ABB) ordenado respecto a los sintomas.
 	Los siguientes parametros representan los atributos de la clase:
 	@param raiz : Snodo raiz del Arbol ABB
@@ -29,7 +29,7 @@ class ArbolSintomas{
 	@param snodo : Snodo que se desea agregar al Arbol ABB
 	*/
 	public void agregarSnodo(Snodo snodo){	
-		if(this.raiz.getSintoma()==null){
+		if(this.raiz.getSintoma()=="none"){
 			this.raiz.igualar(snodo);
 		}else{
 			this.raiz.igualar(this.agregarSintoma(this.raiz,snodo));
@@ -41,7 +41,7 @@ class ArbolSintomas{
 	/**Agrega una serie de snodos de forma recursiva
 		@param snodos : lista de nodos a agregar
 	*/
-	public void agregarSnodo(Vector<Snodo> snodos){	
+	public void agregarSnodo(Vector<Snodo> snodos){		
 		for(int i=0;i<snodos.size();i++)
 		{
 			this.agregarSnodo(snodos.elementAt(i));
@@ -70,7 +70,7 @@ class ArbolSintomas{
 				raiz.setSnodoDer(agregarSintoma(raiz.getSnodoDer(),snodo));
 			}
 		}else{
-			snodo.reemplazar(raiz);			
+			snodo.reemplazar(raiz);		
 			raiz.limpiar();
 			return snodo;
 		}
@@ -86,6 +86,9 @@ class ArbolSintomas{
 		Vector<Snodo> vector=new Vector();
 		//debemos recorrer ambas partes del arbol ya que un nodo puede
 		//no tener un compuesto o puede no tener un medicamento.
+
+		//debemos agregar el nodo raiz tambien al vector
+		vector.add(this.raiz);
 		this.VSnodo(vector, this.raiz.getSnodoIzq());
 		this.VSnodo(vector, this.raiz.getSnodoDer());
 		return vector;

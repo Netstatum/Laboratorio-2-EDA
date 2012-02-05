@@ -44,6 +44,23 @@ class Serializar{
 		return this.nodos;
 	}
 
+	/**@return Devuelve un arbol ArbolSintomas creado a partir de los nodos
+	 * de esta clase*/
+	public ArbolSintomas ArbolSintomas()
+	{
+		int i;
+		Vector<Snodo> snodos=new Vector();
+		for(i=0;i<this.nodos.size();i++)
+		{
+			//revisamos cada nodo para ver los sintomas que
+			//contienen
+			this.buscar_agrear_snodo(snodos, this.nodos.elementAt(i));
+		}
+		
+		return new ArbolSintomas(snodos);
+
+	}
+
 
 	/**Convierte los nodos en un string para poder escribir en un archivo
 	 * Sigue el siguiente formato:
@@ -248,5 +265,55 @@ class Serializar{
 			}
 			index=this.cadena.indexOf("\n\n\n");
 		}
+	}
+
+	/**Busca si el snodo correspondiente a los sintomas del nodo existe, si
+	 * no existe crea un nuevo snodo, si existe agrega los compuestos y
+	 * medicamentos al vector dado
+	 * @param snodos Vector al cual se van a agregar los snodos creados, o
+	 * si ya existe, agregar los compuestos y medicamentos al snodo
+	 * correspondiente
+	 * @param nodo Un nodo de cuyos sintomas se van a crear los snodos en el
+	 * caso de que no exista un snodo correspondiente a un sintoma de nodo*/
+	private void buscar_agrear_snodo(Vector<Snodo> snodos, Nodo nodo)
+	{
+		//buscamos si ya tenemos un snodo con un sintoma, si lo tenemos
+		//entonces agregamos este nodo en ese snodo, si no creamos un
+		//nuevo snodo con el nodo dado
+
+		int i, j;
+		boolean encontrado;
+		for(j=0;j<nodo.getSintomas().size();j++)
+		{
+			encontrado=false;
+			for(i=0;i<snodos.size();i++)
+			{
+				if(nodo.getSintomas().elementAt(j).equalsIgnoreCase(snodos.elementAt(i).getSintoma()))
+				{
+					//debemos agregar este nodo al sintoma
+					if(nodo.getNombreMedicamento()!="")
+					{
+						snodos.elementAt(i).agregarCompuesto(nodo.getNombreMedicamento());
+					}
+
+					if(nodo.getNombreCompuesto()!="")
+					{
+						snodos.elementAt(i).agregarCompuesto(nodo.getNombreCompuesto());
+					}
+					encontrado=true;
+				}
+			}
+
+			if(!encontrado)
+			{
+				//no encontramos el sintoma actual, debemos
+				//crear un nuevo snodo para contener este
+				//sintoma
+				Snodo snodo=new Snodo(nodo.getSintomas().elementAt(j));
+
+				snodos.add(snodo);
+			}
+		}
+
 	}
 }

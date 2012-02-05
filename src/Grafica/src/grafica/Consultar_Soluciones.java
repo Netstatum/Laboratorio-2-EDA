@@ -19,9 +19,16 @@ import java.awt.Dimension;
  */
 public class Consultar_Soluciones extends javax.swing.JFrame {
 
+
+	ArbolNombres arbol_nombres;
+	ArbolSintomas arbol_sintomas;
+
     /** Creates new form Consultar_Soluciones */
-    public Consultar_Soluciones() {
+    public Consultar_Soluciones(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
     }
 
     /** This method is called from within the constructor to
@@ -92,7 +99,7 @@ public class Consultar_Soluciones extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Sintomas ventana2_2 = new Sintomas();
+        Sintomas ventana2_2 = new Sintomas(this.arbol_nombres, this.arbol_sintomas);
         Dimension dlgSize = ventana2_2.getPreferredSize();
         Dimension pantalla = getSize();
         Dimension ventana = ventana2_2.getSize() ;
@@ -109,7 +116,7 @@ public class Consultar_Soluciones extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Consultar_Soluciones().setVisible(true);
+                new Consultar_Soluciones(null, null).setVisible(true);
             }
         });
     }

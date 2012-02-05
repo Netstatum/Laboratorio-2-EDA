@@ -4,7 +4,6 @@
  */
 
 package grafica;
-import package interno;
 
 import java.awt.*;
 import javax.swing.*;
@@ -38,6 +37,12 @@ public class Main {
 				c.setVisible(false);
 				JOptionPane.showMessageDialog(null, "Error!, no se puede leer 'database.txt'");
 				System.exit(1);
+			}catch(java.lang.NullPointerException e){
+
+				c.setVisible(false);
+				JOptionPane.showMessageDialog(null, "Error leyendo el archivo, posiblemente tenga malo el formato");
+				System.exit(1);
+
 			}
 
 			c.setVisible(false);

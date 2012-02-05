@@ -11,15 +11,22 @@
 
 package grafica;
 
+import java.util.Vector;
+
 /**
  *
  * @author Marcial
  */
 public class Sintomas extends javax.swing.JFrame {
 
+	ArbolNombres arbol_nombres;
+	ArbolSintomas arbol_sintomas;
+
     /** Creates new form Sintomas */
-    public Sintomas() {
+    public Sintomas(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
     }
 
     /** This method is called from within the constructor to
@@ -78,7 +85,43 @@ public class Sintomas extends javax.swing.JFrame {
     }//GEN-LAST:event_sintomasIngresadosActionPerformed
 
     private void buscarSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarSolucionActionPerformed
-        // Variable sintomas ingresados=sintomasIngresados.getText();
+
+	//debemos ver si el usuario ha ingresado algo
+	
+	if(sintomasIngresados.getText()==null)
+	{
+		System.out.println("Debe ingresar los sintomas a buscar");
+	}else{
+		//buscamos los sintomas en el arbol
+		try{
+			String []sintomas=sintomasIngresados.getText().split(",");
+
+			Vector<String> vector=new Vector();
+
+			int i;
+			for(i=0;i<sintomas.length;i++)
+			{
+				vector.add(sintomas[i]);
+			}
+
+			if(vector.size()>=1)
+			{
+				Vector <String> mejor=this.arbol_sintomas.mejorSolucion(this.arbol_sintomas.BuscarSintoma(vector));
+
+				System.out.println(mejor.elementAt(0));
+
+				Nodo nodo=this.arbol_nombres.BuscarMedicamento(mejor.elementAt(0));
+				System.out.println(nodo.getNombreCompuesto());
+			}
+
+
+		}catch(ArbolSintomasNoEncontrado e){
+			System.out.println("Sintoma no encontrado");
+		}catch(ArbolNombres_NoEncontrado e){
+			System.out.println("Compuesto o medicamento no encontrado");
+		}
+	}
+
     }//GEN-LAST:event_buscarSolucionActionPerformed
 
     /**
@@ -87,7 +130,7 @@ public class Sintomas extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sintomas().setVisible(true);
+                new Sintomas(null, null).setVisible(true);
             }
         });
     }

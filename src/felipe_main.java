@@ -11,26 +11,12 @@ public class felipe_main{
 
 		f.Leer();
 
+
 		ArbolNombres arbol=f.ArbolNombres();
+
+		f.Escribir(arbol);
 		
-		arbol.BuscarCompuesto("Aspirina");
-
-		ArbolSintomas sintomas=f.ArbolSintomas();
-
-		Vector<Snodo> nodos=sintomas.VSnodos();
-
-		int i;
-		for(i=0;i<nodos.size();i++)
-		{
-			System.out.println(nodos.elementAt(i).getSintoma());
-		}
-
-		try{
-			sintomas.BuscarSintoma("vomitos");
-			
-		}catch(ArbolSintomasNoEncontrado e){
-			//System.out.println("UPS");
-		}
+		arbol.BuscarMedicamento("Chimmy Cherry");
 
 	}
 }

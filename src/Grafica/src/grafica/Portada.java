@@ -100,7 +100,7 @@ public class Portada extends javax.swing.JFrame {
 	}//GEN-LAST:event_jButton1ActionPerformed
 
 	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-		Consultar_Soluciones ventana2 = new Consultar_Soluciones();
+		Consultar_Soluciones ventana2 = new Consultar_Soluciones(this.arbol_nombres, this.arbol_sintomas);
 		Dimension dlgSize = ventana2.getPreferredSize();
 		Dimension pantalla = getSize();
 		Dimension ventana = ventana2.getSize() ;
