@@ -32,27 +32,80 @@ public class Editar extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        NuevoTratamiento = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Nuevosintomas = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        NuevoNombre_medic = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        NuevoNombreComp = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar2.jpg"))); // NOI18N
-        jLabel1.setBounds(40, 20, 59, 36);
+        NuevoTratamiento.setColumns(20);
+        NuevoTratamiento.setRows(5);
+        jScrollPane2.setViewportView(NuevoTratamiento);
+
+        jScrollPane2.setBounds(20, 280, 310, 40);
+        jDesktopPane1.add(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel4.setText("Nuevos Tratamientos:");
+        jLabel4.setBounds(20, 250, 120, 14);
+        jDesktopPane1.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Nuevosintomas.setColumns(20);
+        Nuevosintomas.setRows(5);
+        jScrollPane1.setViewportView(Nuevosintomas);
+
+        jScrollPane1.setBounds(20, 190, 310, 40);
+        jDesktopPane1.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel3.setText("Nuevos Sintomas:");
+        jLabel3.setBounds(20, 160, 120, 14);
+        jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        NuevoNombre_medic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NuevoNombre_medicActionPerformed(evt);
+            }
+        });
+        NuevoNombre_medic.setBounds(20, 120, 190, 20);
+        jDesktopPane1.add(NuevoNombre_medic, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel2.setText("Nuevo Nombre medicamento:");
+        jLabel2.setBounds(20, 90, 190, 14);
+        jDesktopPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        NuevoNombreComp.setBounds(20, 50, 190, 20);
+        jDesktopPane1.add(NuevoNombreComp, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel1.setText("Escriba nuevo Nombre Compuesto:");
+        jLabel1.setBounds(20, 20, 190, 14);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void NuevoNombre_medicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoNombre_medicActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_NuevoNombre_medicActionPerformed
 
     /**
     * @param args the command line arguments
@@ -66,8 +119,17 @@ public class Editar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField NuevoNombreComp;
+    private javax.swing.JTextField NuevoNombre_medic;
+    private javax.swing.JTextArea NuevoTratamiento;
+    private javax.swing.JTextArea Nuevosintomas;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
 
 }

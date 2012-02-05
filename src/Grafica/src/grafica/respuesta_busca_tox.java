@@ -11,6 +11,8 @@
 
 package grafica;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Marcial
@@ -42,6 +44,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         Tratamiento = new javax.swing.JTextArea();
+        Modificar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -85,6 +88,15 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         jScrollPane2.setBounds(20, 280, 310, 40);
         respuestatox.add(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        Modificar.setText("Modificar");
+        Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModificarActionPerformed(evt);
+            }
+        });
+        Modificar.setBounds(183, 350, 150, 23);
+        respuestatox.add(Modificar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,9 +105,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(respuestatox, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(respuestatox, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
         );
 
         pack();
@@ -104,6 +114,18 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     private void Nombre_medicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Nombre_medicActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Nombre_medicActionPerformed
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+    		Editar ventana3 = new Editar();
+		Dimension dlgSize = ventana3.getPreferredSize();
+		Dimension pantalla = getSize();
+		Dimension ventana = ventana3.getSize() ;
+		ventana3.setLocation((pantalla.width - Editar.WIDTH ) / 2 ,(pantalla.height - Editar.HEIGHT) / 2);
+		ventana3.setLocationRelativeTo(null) ; // CENTRA EL SEGUNDO FRAME EN LA PANTA
+		ventana3.pack() ;
+		ventana3.setResizable(true) ; // PERMITE REDIMENSIONAR
+		ventana3.setVisible(true) ;
+    }//GEN-LAST:event_ModificarActionPerformed
 
     /**
     * @param args the command line arguments
@@ -117,6 +139,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Modificar;
     private javax.swing.JTextField NombreComp;
     private javax.swing.JTextField Nombre_medic;
     private javax.swing.JTextArea Tratamiento;
