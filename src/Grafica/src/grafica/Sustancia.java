@@ -35,6 +35,7 @@ public class Sustancia extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         sustanciaIngresada = new javax.swing.JTextField();
         buscarSolucion = new javax.swing.JButton();
+        medicamentoSustancia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -56,8 +57,16 @@ public class Sustancia extends javax.swing.JFrame {
                 buscarSolucionActionPerformed(evt);
             }
         });
-        buscarSolucion.setBounds(120, 130, 170, 23);
+        buscarSolucion.setBounds(120, 120, 170, 23);
         jDesktopPane1.add(buscarSolucion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        medicamentoSustancia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicamentoSustanciaActionPerformed(evt);
+            }
+        });
+        medicamentoSustancia.setBounds(40, 170, 210, 20);
+        jDesktopPane1.add(medicamentoSustancia, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +90,10 @@ public class Sustancia extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_sustanciaIngresadaActionPerformed
 
+    private void medicamentoSustanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamentoSustanciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicamentoSustanciaActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -96,6 +109,7 @@ public class Sustancia extends javax.swing.JFrame {
     private javax.swing.JButton buscarSolucion;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField medicamentoSustancia;
     private javax.swing.JTextField sustanciaIngresada;
     // End of variables declaration//GEN-END:variables
 

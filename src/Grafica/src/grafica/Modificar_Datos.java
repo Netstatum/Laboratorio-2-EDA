@@ -35,11 +35,9 @@ public class Modificar_Datos extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -49,17 +47,8 @@ public class Modificar_Datos extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton1.setBounds(50, 0, 70, 70);
+        jButton1.setBounds(50, 30, 70, 70);
         jDesktopPane1.add(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar.jpg"))); // NOI18N
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jButton2.setBounds(50, 70, 70, 70);
-        jDesktopPane1.add(jButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Busqueda.jpg"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -67,7 +56,7 @@ public class Modificar_Datos extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jButton3.setBounds(50, 140, 70, 80);
+        jButton3.setBounds(50, 100, 70, 80);
         jDesktopPane1.add(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Eliminacion de agentes toxicos.jpg"))); // NOI18N
@@ -76,23 +65,19 @@ public class Modificar_Datos extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        jButton4.setBounds(50, 220, 70, 80);
+        jButton4.setBounds(50, 180, 70, 80);
         jDesktopPane1.add(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresar agente toxico.jpg"))); // NOI18N
-        jLabel1.setBounds(150, 20, 205, 40);
+        jLabel1.setBounds(140, 50, 205, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/editar2.jpg"))); // NOI18N
-        jLabel2.setBounds(150, 90, 60, 36);
-        jDesktopPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Buscar agente toxico.jpg"))); // NOI18N
-        jLabel3.setBounds(150, 170, 152, 40);
+        jLabel3.setBounds(140, 120, 152, 40);
         jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.jpg"))); // NOI18N
-        jLabel4.setBounds(150, 240, 73, 36);
+        jLabel4.setBounds(140, 200, 73, 36);
         jDesktopPane1.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -108,18 +93,6 @@ public class Modificar_Datos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Editar ventana1_2 = new Editar();
-        Dimension dlgSize = ventana1_2.getPreferredSize();
-        Dimension pantalla = getSize();
-        Dimension ventana = ventana1_2.getSize() ;
-        ventana1_2.setLocation((pantalla.width - Editar.WIDTH ) / 2 ,(pantalla.height - Editar.HEIGHT) / 2);
-        ventana1_2.setLocationRelativeTo(null) ; // CENTRA EL SEGUNDO FRAME EN LA PANTA
-        ventana1_2.pack() ;
-        ventana1_2.setResizable(true) ; // PERMITE REDIMENSIONAR
-        ventana1_2.setVisible(true) ;
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Ingresar_Nuevo_Toxico ventana1_1 = new Ingresar_Nuevo_Toxico();
@@ -170,12 +143,10 @@ public class Modificar_Datos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables

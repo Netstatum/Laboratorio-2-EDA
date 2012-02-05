@@ -53,7 +53,7 @@ public class Editar extends javax.swing.JFrame {
         jDesktopPane1.add(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel4.setText("Nuevos Tratamientos:");
-        jLabel4.setBounds(20, 250, 120, 14);
+        jLabel4.setBounds(20, 250, 120, -1);
         jDesktopPane1.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Nuevosintomas.setColumns(20);
@@ -64,7 +64,7 @@ public class Editar extends javax.swing.JFrame {
         jDesktopPane1.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Nuevos Sintomas:");
-        jLabel3.setBounds(20, 160, 120, 14);
+        jLabel3.setBounds(20, 160, 120, -1);
         jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         NuevoNombre_medic.addActionListener(new java.awt.event.ActionListener() {
@@ -72,17 +72,17 @@ public class Editar extends javax.swing.JFrame {
                 NuevoNombre_medicActionPerformed(evt);
             }
         });
-        NuevoNombre_medic.setBounds(20, 120, 190, 20);
+        NuevoNombre_medic.setBounds(20, 120, 190, -1);
         jDesktopPane1.add(NuevoNombre_medic, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel2.setText("Nuevo Nombre medicamento:");
-        jLabel2.setBounds(20, 90, 190, 14);
+        jLabel2.setBounds(20, 90, 190, -1);
         jDesktopPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        NuevoNombreComp.setBounds(20, 50, 190, 20);
+        NuevoNombreComp.setBounds(20, 50, 190, -1);
         jDesktopPane1.add(NuevoNombreComp, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel1.setText("Escriba nuevo Nombre Compuesto:");
-        jLabel1.setBounds(20, 20, 190, 14);
+        jLabel1.setBounds(20, 20, 190, -1);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
