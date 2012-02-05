@@ -187,7 +187,7 @@ class ArbolSintomas{
 		}
 	}
 	
-	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas){
+	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas)throws ArbolSintomasNoEncontrado{
 		Vector<Snodo> snodos = new Vector();
 	
 		for(int i=0;i<sintomas.size();i++)
