@@ -112,6 +112,7 @@ public class Sintomas extends javax.swing.JFrame {
 			for(i=0;i<sintomas.length;i++)
 			{
 				vector.add(sintomas[i].trim());
+				System.out.println(sintomas[i].trim());
 			}
 
 			

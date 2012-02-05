@@ -13,15 +13,28 @@ public class felipe_main{
 
 
 		ArbolNombres arbol=f.ArbolNombres();
-		ArbolSintomas arbols=f.ArbolSintomas();
+		ArbolSintomas arbol_sintomas=f.ArbolSintomas();
 
 		f.Escribir(arbol);
 
-		Vector<Snodo> nodos=arbols.VSnodos();
+		Vector<String> sintomas=new Vector();
 
-		for(int i=0;i<nodos.size();i++)
-		{
-			System.out.println(nodos.elementAt(i).getSintoma());
+		sintomas.add("LOLCOde");
+
+		try{
+			Vector <String> mejor=arbol_sintomas.mejorSolucion(arbol_sintomas.BuscarSintoma(sintomas));
+
+			if(mejor.size()!=0)
+			{
+				Nodo nodo=arbol.BuscarCompuesto(mejor.elementAt(0));
+				System.out.println(nodo.getNombreCompuesto());
+			}else{
+				System.out.println("no se encontro");
+			}
+
+
+		}catch(ArbolSintomasNoEncontrado e){
+			System.out.println("No encontrado");
 		}
 
 		
