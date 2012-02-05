@@ -42,6 +42,7 @@ public class Editar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         NuevoNombreComp = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        Editar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -53,7 +54,7 @@ public class Editar extends javax.swing.JFrame {
         jDesktopPane1.add(jScrollPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel4.setText("Nuevos Tratamientos:");
-        jLabel4.setBounds(20, 250, 120, -1);
+        jLabel4.setBounds(20, 250, 120, 14);
         jDesktopPane1.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         Nuevosintomas.setColumns(20);
@@ -64,7 +65,7 @@ public class Editar extends javax.swing.JFrame {
         jDesktopPane1.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setText("Nuevos Sintomas:");
-        jLabel3.setBounds(20, 160, 120, -1);
+        jLabel3.setBounds(20, 160, 120, 14);
         jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         NuevoNombre_medic.addActionListener(new java.awt.event.ActionListener() {
@@ -72,32 +73,37 @@ public class Editar extends javax.swing.JFrame {
                 NuevoNombre_medicActionPerformed(evt);
             }
         });
-        NuevoNombre_medic.setBounds(20, 120, 190, -1);
+        NuevoNombre_medic.setBounds(20, 120, 190, 20);
         jDesktopPane1.add(NuevoNombre_medic, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel2.setText("Nuevo Nombre medicamento:");
-        jLabel2.setBounds(20, 90, 190, -1);
+        jLabel2.setBounds(20, 90, 190, 14);
         jDesktopPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        NuevoNombreComp.setBounds(20, 50, 190, -1);
+        NuevoNombreComp.setBounds(20, 50, 190, 20);
         jDesktopPane1.add(NuevoNombreComp, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel1.setText("Escriba nuevo Nombre Compuesto:");
-        jLabel1.setBounds(20, 20, 190, -1);
+        jLabel1.setBounds(20, 20, 190, 14);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        Editar.setText("Editar");
+        Editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditarActionPerformed(evt);
+            }
+        });
+        Editar.setBounds(183, 350, 140, 23);
+        jDesktopPane1.add(Editar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -106,6 +112,10 @@ public class Editar extends javax.swing.JFrame {
     private void NuevoNombre_medicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NuevoNombre_medicActionPerformed
         // TODO add your handling code here:
 }//GEN-LAST:event_NuevoNombre_medicActionPerformed
+
+    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditarActionPerformed
 
     /**
     * @param args the command line arguments
@@ -119,6 +129,7 @@ public class Editar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Editar;
     private javax.swing.JTextField NuevoNombreComp;
     private javax.swing.JTextField NuevoNombre_medic;
     private javax.swing.JTextArea NuevoTratamiento;
