@@ -68,6 +68,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         Tratamiento = new javax.swing.JTextArea();
         Modificar = new javax.swing.JButton();
+        BotonEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -120,6 +121,15 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         Modificar.setBounds(183, 350, 150, 23);
         respuestatox.add(Modificar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        BotonEliminar.setText("Eliminar");
+        BotonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonEliminarActionPerformed(evt);
+            }
+        });
+        BotonEliminar.setBounds(20, 350, 140, 23);
+        respuestatox.add(BotonEliminar, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -138,7 +148,11 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Nombre_medicActionPerformed
 
-    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
+    private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonEliminarActionPerformed
+
+    private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {                                          
 
 	Nodo nodo=new Nodo();
 	nodo.setNombreMedicamento(this.Nombre_medic.getText());
@@ -182,6 +196,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonEliminar;
     private javax.swing.JButton Modificar;
     private javax.swing.JTextField NombreComp;
     private javax.swing.JTextField Nombre_medic;
