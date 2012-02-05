@@ -300,7 +300,7 @@ class ArbolSintomas{
 					mejores.clear();
 				//Si hay unos con la misma cantidad de repeticiones se añada al array mejores
 				}else if(repeticiones.elementAt(j)==repetidor){
-					mejores.add(repetido.elementAt(j);
+					mejores.add(repetido.elementAt(j));
 				}
 			}
 
