@@ -1,13 +1,12 @@
 nombre_medicamento = Aspirina
 nombre_compuesto = Acido
 sintomas = mareos,vomitos,asdf,
-
-nombre_medicamento = Acido de Baterias
-nombre_compuesto = Acido sulfurico
+solucion = Descansar y estar en cama
+	Esperar la ambulancia
 
 nombre_medicamento = Chimmy Cherry
 nombre_compuesto = Cherry Changa
-sintomas = Friendship,mareos,vomitos
+sintomas = Friendship,mareos,vomitos,
 
 nombre_medicamento = Lenguajes de programacion
 nombre_compuesto = Letras
