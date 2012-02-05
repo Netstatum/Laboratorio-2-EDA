@@ -44,6 +44,7 @@ class Fichero{
 		f.read(buffer);
 		this.contenido=new String(buffer);
 
+
 		this.serializar=new Serializar(this.contenido);
 
 	}

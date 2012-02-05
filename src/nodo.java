@@ -7,6 +7,10 @@ class Nodo{
 	/**El nombre del compuesto que se encuentra en este nodo*/
 	private String nombre_compuesto;
 
+	/**Los procedimientos a seguir para solucionar la intoxicacion con este
+	 * medicamento, compuesto o sintomas*/
+	private String solucion;
+
 	/**Vector que contiene los síntomas del compuesto o medicamento que se
 	 * encuentra en este nodo*/
 	private Vector<String> sintomas;
@@ -19,29 +23,32 @@ class Nodo{
 	 * nodo
 	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo
 	 * @param sintomas Un array de los posibles síntomas que pueda tener el
-	 * ingerir este medicamento o compuesto o sustancia*/
-	Nodo(String nombre_medicamento, String nombre_compuesto)
+	 * ingerir este medicamento o compuesto o sustancia
+	 * @param solucion La solucion para tratar la intoxcicacion del paciente*/
+	Nodo(String nombre_medicamento, String nombre_compuesto, String solucion)
 	{
-		this.inicializar(nombre_medicamento, nombre_compuesto);
+		this.inicializar(nombre_medicamento, nombre_compuesto, solucion);
 	}
 
 	/**Inicia un nuevo nodo vació*/
 	Nodo()
 	{
-		this.inicializar(null, null);
+		this.inicializar(null, null, null);
 	}
 
 	/**Se encarga de inicializar las variables de acuerdo a los argumentos
 	 * dados
 	 * @param nombre_medicamento El nombre del medicamento que contendrá el
 	 * nodo
-	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo*/
-	void inicializar(String nombre_medicamento, String nombre_compuesto)
+	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo
+	 * @param solucion La solucion para tratar la intoxcicacion del paciente*/
+	void inicializar(String nombre_medicamento, String nombre_compuesto, String solucion)
 	{
 
 		this.nombre_medicamento=nombre_medicamento;
 		this.nombre_compuesto=nombre_compuesto;
 		this.sintomas=sintomas;
+		this.solucion=solucion;
 
 		this.izq=null;
 		this.der=null;
@@ -112,6 +119,20 @@ class Nodo{
 	public Nodo getNodoIzq()
 	{
 		return this.izq;
+	}
+
+	/**@return Devuelve la solucion para tratar la intoxicacion causada por
+	 * el compuesto o medicamento de este nodo*/
+	public String getSolucion()
+	{
+		return this.solucion;
+	}
+
+	/**Asigna la solucion dada a este nodo
+	 * @param solucion La solucion a asignar*/
+	public void setSolucion(String solucion)
+	{
+		this.solucion=solucion;
 	}
 
 	/**@return Devuelve un vector de strings con los síntomas de este nodo*/

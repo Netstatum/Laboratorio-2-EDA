@@ -71,7 +71,7 @@ class Serializar{
 	 * Acepta comentarios con #*/
 	private void serializar()
 	{
-		int i, j;
+		int i;
 		String c;
 		Nodo nodo;
 
@@ -91,19 +91,31 @@ class Serializar{
 			{
 				c+="nombre_compuesto = "+nodo.getNombreCompuesto();
 			}
+
 			
 			//solo si hay síntomas los mostramos en el string
 			if(nodo.getSintomas().size()>0)
 			{
 				c+="\nsintomas = ";
-				for(j=0;j<nodo.getSintomas().size();j++)
+				for(int j=0;j<nodo.getSintomas().size();j++)
 				{
 					//Agregamos cada síntoma al string c
 					//separados por comas
 					c+=nodo.getSintomas().elementAt(j)+",";
 				}
+				c+="\n";
 			}
 
+
+			if(nodo.getSolucion()!=null)
+			{
+				String []solucion=nodo.getSolucion().split("\n");
+				c+="solucion = "+solucion[0]+"\n";
+				for(int j=1;j<solucion.length;j++)
+				{
+					c+="\t"+solucion[j]+"\n";
+				}
+			}
 
 			//esto es obligación: debemos separar cada bloque por un
 			//salto de linea. El primer salto de linea no se cuenta
@@ -112,7 +124,7 @@ class Serializar{
 			//al final de síntomas en el caso de que si hayan.
 			//El segundo salto de linea separa cada bloque de
 			//variables entre si.
-			c+="\n\n";
+			c+="\n";
 
 			this.cadena+=c;
 		}
@@ -158,7 +170,8 @@ class Serializar{
 		Nodo nodo=new Nodo();
 		String []asignacion;
 		String variable, valor;
-		int i;
+		String solucion;
+		int i, j;
 		for(i=0;i<lineas.length;i++)
 		{
 			if(lineas[i]!="")
@@ -169,7 +182,9 @@ class Serializar{
 				//Al separar con split VARIABLE y VALOR quedan guardadas
 				//en un array (asignación) en el cual el primer elemento
 				//es la VARIABLE y el segundo el VALOR de la variable
+
 				asignacion=lineas[i].split("=");
+
 
 				if(asignacion.length==2) //esta linea es valida
 				{
@@ -200,6 +215,16 @@ class Serializar{
 						//encargar de agregar los síntomas al
 						//nodo dado
 						crear_sintomas(valor, nodo);
+
+					}else if(variable.equalsIgnoreCase("solucion")){
+
+						solucion=valor+"\n";
+						for(i=i+1;i<lineas.length;i++)
+						{
+							solucion+=lineas[i].trim()+"\n";
+						}
+
+						nodo.setSolucion(solucion);
 
 					}else{
 						//no valido
@@ -316,4 +341,5 @@ class Serializar{
 		}
 
 	}
+
 }
