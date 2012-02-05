@@ -1,0 +1,400 @@
+nombre_medicamento = ghKKKALvHGLeGMaKT
+nombre_compuesto = rybjOfWpMw
+sintomas = UYRiUOwvIo,kUYnQbgxV,Xga,ldTJtEMBGgr,
+
+nombre_medicamento = MeqtGZUgYdNOAQGMKW
+nombre_compuesto = QfbAoCZEauxMGvht
+sintomas = kCTbiyDndIgJwDQAhsnh,oEaytRFEFlrm,vODnwHheahxVEexzok,Sccsuxq,
+
+nombre_medicamento = qkiIrZXLR
+nombre_compuesto = lmoOSjxyBcxNIaCCsZel
+sintomas = nwOs,zAkMoxXI,ZQJhCkADrYWMBniA,
+
+nombre_medicamento = HiGLbjFSUUDtmK
+nombre_compuesto = JxRgaXeNHUKQaUUEZHt
+sintomas = uNJtKJxO,LcTJinQNXvIKR,ucUUTCUBabFbSFP,
+
+nombre_medicamento = TnIETsKHKRK
+nombre_compuesto = kgggXJfSnqWxvjNUCFq
+sintomas = GwFxgxBGdka,
+
+nombre_medicamento = GYUyXgVJKBkY
+nombre_compuesto = vOIey
+sintomas = oiVIrhCSYmH,QcgUJjuye,
+
+nombre_medicamento = EJvpq
+nombre_compuesto = dVxsgujouEOkbLCDc
+sintomas = kpaqqOXOaO,xqglHfbwiCmJA,OGSQBcPgrpPM,
+
+nombre_medicamento = lNgXxrVRRClns
+nombre_compuesto = ykWIx
+sintomas = uBdqbi,ZmlNzAHqvTvBeZypXtLL,GjmxmA,oroYGShanL,
+
+nombre_medicamento = xnWTpEVQRCiEnMzRquI
+nombre_compuesto = vwZpgGydDWTtPLv
+sintomas = jDvrKYtNEsZaPn,SxeLOMrW,
+
+nombre_medicamento = REAXuRai
+nombre_compuesto = FOU
+sintomas = vzojEYzZSA,
+
+nombre_medicamento = HlqLXuWVBhUjmkM
+nombre_compuesto = fvGqRCLZpqQKjv
+sintomas = CliKwtcIeUJaXGwsvc,jWvzJMlDpXJjdtACsrqD,iQnHKgfm,LSdVZaVEhSJUSqdH,
+
+nombre_medicamento = rVOFeS
+nombre_compuesto = MeqFvXJ
+sintomas = bHBZzRmIecwNe,SROVBMrebyzuJcX,LXGswZudXSZWhZqQx,
+
+nombre_medicamento = yYacBuiPyZruIJSK
+nombre_compuesto = xtEnSnQbqJwvxnyGNgjE
+sintomas = vOFXHkI,NsGTuPUVkRTfLSR,OrbSsyAsYtoHyQ,XIXri,SFNbuXSLVPIBusngW,
+
+nombre_medicamento = JTTqBmwtWCoVVYdhiA
+nombre_compuesto = szwkP
+sintomas = utoJiDptB,
+
+nombre_medicamento = vLpF
+nombre_compuesto = FbktMPJSyqpxVve
+sintomas = lHsUILKzo,agoPzLRXSXbgQVRPeh,mmxU,
+
+nombre_medicamento = DwabTZAUBcz
+nombre_compuesto = RwpWvhukGwASvXC
+sintomas = xCSKuqtpH,CsUslsievDlwEWK,BYiqCv,PIRyyfwEO,
+
+nombre_medicamento = DMFzqcOlvKzwmDyybCZy
+nombre_compuesto = CgZfNH
+sintomas = szjWfGsiVckXlXAKS,bxnfUiQzslLmDh,rIqeCmwU,MHCASlgoPJOwNMn,
+
+nombre_medicamento = Urgsm
+nombre_compuesto = MPmJwELIY
+sintomas = oCfGZv,KBTlwXprttZvgaDtQWqc,QFyrbjbotYLqYBliN,
+
+nombre_medicamento = ZlPw
+nombre_compuesto = DSlQLuJwJKYJNh
+sintomas = wbuByOlHMShoZTNR,TrXWSVFCt,AxTITgTXxTXZNlFknVhb,
+
+nombre_medicamento = bMMmUKRICXdeIkUt
+nombre_compuesto = ezmeZXZYdhfxwaY
+sintomas = cuyhuW,ttvOVDFGXyeSwWF,LXRdNXbcyTX,
+
+nombre_medicamento = seI
+nombre_compuesto = CidBiRBQlT
+sintomas = HsMGxuZkRBAlPxKKvFp,
+
+nombre_medicamento = bUzEWDattPD
+nombre_compuesto = QkuWR
+sintomas = QfRgHnLFoaPWdUDES,
+
+nombre_medicamento = qSuQgnstBrbdDvYc
+nombre_compuesto = uoGhWd
+sintomas = mvSjBw,zWz,YQxKVbOxETtk,yjg,VAuIdJBgCSoocHBXVY,
+
+nombre_medicamento = JovTHLHkpwZCW
+nombre_compuesto = dmsw
+sintomas = POZ,tRoCGWjsjcpJd,fRaWNegzvFfUMd,Qkbo,
+
+nombre_medicamento = vVXveAgSBjwsVKDqK
+nombre_compuesto = RqBFNFvhfIa
+sintomas = xlAGAzHAKCuoiOJLOpu,rrvk,DvpyFTaeKEuCDNAu,
+
+nombre_medicamento = lTQIXmkiYQoIgqZf
+nombre_compuesto = yXwczwNJclEUhJcD
+sintomas = AueYtoSHwV,UExQaonmti,TzKncxcRSo,
+
+nombre_medicamento = VUkQg
+nombre_compuesto = AHXBykOOrexMFF
+sintomas = zFqhJNxcYQTxLDkxf,
+
+nombre_medicamento = OOePllFvbhIMHi
+nombre_compuesto = UZI
+sintomas = vyvRmdGUFLLWNiqhnUYA,QazArvBAfXaVMrv,DkcDwBLIeDadNMUnB,
+
+nombre_medicamento = dMYozdjMkFyhCZ
+nombre_compuesto = XoKK
+sintomas = wSokJxwTAPw,uYx,ZzvRIMCD,znqaD,MxcDPkr,
+
+nombre_medicamento = mKvPcZXwpdWiAJKD
+nombre_compuesto = zrhirVRmHugJdYQjJpv
+sintomas = sYuExdk,
+
+nombre_medicamento = OXnTSol
+nombre_compuesto = cRlFdA
+sintomas = AJsHMjColMTTPGubNN,ZsehDqJfTzJBPmkn,RUcEy,JlmIynhEI,
+
+nombre_medicamento = wsjalbHrBOLC
+nombre_compuesto = MZlcwsWcZKnteAlA
+sintomas = hKTKPUoeahaycIu,PQBrZVkoRzHrylEGMO,gTYsEJAUVWadIPFUp,jZGQbqHwWB,
+
+nombre_medicamento = AschLOjlI
+nombre_compuesto = jXJwuD
+sintomas = ttlCD,
+
+nombre_medicamento = QKPpOxzH
+nombre_compuesto = eWECrptyNdhhZtvLxgs
+sintomas = ytRTJOBoilqVpJeRO,MqFzmcjJXvXo,ADoAlHvivSRQxMS,bGQXRbXaGjYzk,
+
+nombre_medicamento = IfQMwimRrPtyTwCgctCi
+nombre_compuesto = nRbquFEraiSZqpXrawbQ
+sintomas = cxF,IvipIZV,hhwfs,rFn,
+
+nombre_medicamento = bCjQgdRvBweoBx
+nombre_compuesto = TwxGnYhUEwQWWuedD
+sintomas = Xxmbterp,AkZbGdwpywyDuP,
+
+nombre_medicamento = plzaOuphSzBtq
+nombre_compuesto = ZmT
+sintomas = ppl,
+
+nombre_medicamento = VAsOzWRokkIrQF
+nombre_compuesto = rwrLYEXAJk
+sintomas = pEeWxWytaXvStszVNs,faTXTaIcnUiMwTVnsgT,qon,ezg,
+
+nombre_medicamento = gnYAJPFnzMefNXTZhuhX
+nombre_compuesto = GSnJE
+sintomas = ACOTkgjlXgr,HwWWiyLCLEfENGHocpxH,opmAoE,lZSh,
+
+nombre_medicamento = qhcEpFSb
+nombre_compuesto = qlbIKxHnfzuKnLLi
+sintomas = umqEvdraHbCwTLe,
+
+nombre_medicamento = oiezAQ
+nombre_compuesto = ciECjl
+sintomas = meBiRFrXcw,tFSQfIGQaxdqPSqhQ,DjojBtBGfHmpHyQfn,
+
+nombre_medicamento = kBiqV
+nombre_compuesto = iYPOyvqWl
+sintomas = sYyWfOEiFLJEV,bKRgizvIvfJGdK,FhkJfxEcqZfoXgashR,RTCkOKoQnFm,
+
+nombre_medicamento = nRkXsCWM
+nombre_compuesto = BWRi
+sintomas = MlX,LefxfU,
+
+nombre_medicamento = DqOibCrbqEzjlYboa
+nombre_compuesto = hWgGdYWxpv
+sintomas = mOqhYaHVKag,
+
+nombre_medicamento = FfNjrapFnd
+nombre_compuesto = iTQCkfabHoeLha
+sintomas = DmMTI,RantAy,HcPjSRH,KNBxdsfyzodsygaIF,
+
+nombre_medicamento = dhxoGKdmbEszRAVDnVuZ
+nombre_compuesto = eSNDQUPHJW
+sintomas = EDASMusaXLdOACd,
+
+nombre_medicamento = XQmOMB
+nombre_compuesto = OUYQow
+sintomas = qLkyLFcgp,
+
+nombre_medicamento = uvj
+nombre_compuesto = XvrxTIQuMuI
+sintomas = RkbHfwupzK,QEzMMQsiAnbPSjvLu,wiDfTZgFOZAAT,HfI,
+
+nombre_medicamento = eeUFSmDvxqZZpKJOvlx
+nombre_compuesto = PUAoCRcSzIUY
+sintomas = mcABnefinNGlExDuJiin,MULOuCgv,cfRhkCycqzhR,sgvTd,TugA,
+
+nombre_medicamento = qBJtoLQtOzpqZmhV
+nombre_compuesto = vwnIAznTL
+sintomas = KxzzEskWM,QNntMUaM,CDHw,iCsbDOkVcrYlEg,iCxaYDMxx,
+
+nombre_medicamento = kQBp
+nombre_compuesto = hIZruaZHFibYGZZa
+sintomas = JYqXVuPJQMngrxVz,yeS,wiCCnZYxPEqbnASP,QdNMriILlfNLJoNj,Fuxkh,
+
+nombre_medicamento = OXOJlVnkALiaGE
+nombre_compuesto = FbLDRptsabCgmVA
+sintomas = KGIzhAM,bczsI,BwDOV,
+
+nombre_medicamento = CslvPJDuDA
+nombre_compuesto = DeCH
+sintomas = sCvAYGjqwOoo,zWCbqGiMQIsggx,xqaKXrCdkIkDu,zqZMIJIioTXKbMn,
+
+nombre_medicamento = PwEL
+nombre_compuesto = jsPzgqlvNCvW
+sintomas = KelTgc,WwR,
+
+nombre_medicamento = wPH
+nombre_compuesto = SGAbnyrVTSZsGmFmNpS
+sintomas = NMVZzlAQUINWxrCsHn,ADdblbmidMiGDPJ,kaH,
+
+nombre_medicamento = ARrAmiNwxw
+nombre_compuesto = lOHubkgBmDhWYQEuacWB
+sintomas = vitgGDKtWwSKglayK,ZtShD,gNPQNGbWAFlFywMJnpc,KyGGUDjipxLEf,UxDhl,
+
+nombre_medicamento = bEesmdZChNEdvVzoIEZ
+nombre_compuesto = jMoXjJZkKNG
+sintomas = pKmALWFCXPz,
+
+nombre_medicamento = QlzzpDpeOa
+nombre_compuesto = vbiD
+sintomas = DxxSgQxFdAO,ZcTyEDvICPBpBIhO,BcUAxUpDbMuIFyAO,
+
+nombre_medicamento = iltRwZoYBasMhqm
+nombre_compuesto = HengoHTXSrDkudZb
+sintomas = AdfeWwdIb,
+
+nombre_medicamento = UxLZFDx
+nombre_compuesto = qyiZrkKtAvKlGzgIbR
+sintomas = RcdsIqyGmOeANbTuQgk,oDb,
+
+nombre_medicamento = mwyARixNUsm
+nombre_compuesto = XzIvbARekcYvRpNdg
+sintomas = QOlOwxlgkRAWwEhOCs,KVfPKvz,WQTQchvR,tVgjwG,
+
+nombre_medicamento = dTFWiNm
+nombre_compuesto = IYVBKsI
+sintomas = GKbhCHWP,CpvPYpWlVpvJoUYJIy,
+
+nombre_medicamento = uPxGZIGaSkpUyj
+nombre_compuesto = gtvdAPejUlUBJ
+sintomas = VWLbzORUZMzD,
+
+nombre_medicamento = Tacs
+nombre_compuesto = SqEnFwFUSlznnBIG
+sintomas = WwzjdEaHPacelmhRGHi,TAakontI,QXgnTYfeNiWqwam,LSmfplWPO,WZBAtzBOqobwsD,
+
+nombre_medicamento = MsWWyDgEWNwGND
+nombre_compuesto = yxLejzeYoWMjVrkw
+sintomas = frmqVjFuuSRwygEIFQM,yzp,dEPLXILaLVjFO,CFzHuLhRXeW,wwDkxn,
+
+nombre_medicamento = EZh
+nombre_compuesto = QnyJDmqkjNwfibpOAV
+sintomas = TOBvFVuUHfJQzfGTd,MWXyHKdYoHmlrdgju,vKgvtzBqrpPJ,
+
+nombre_medicamento = liGnweWtNwoyDkelgJ
+nombre_compuesto = Coc
+sintomas = cMcYihxnVzyZIVl,koKZzlMZWtSNaT,
+
+nombre_medicamento = TRviYXxwJS
+nombre_compuesto = txiBZvwg
+sintomas = tAeLuiqEtIZl,MDeRJdEpABlhfyWk,
+
+nombre_medicamento = WTyAIsVuZEqNzdnGA
+nombre_compuesto = jTGEQCFzIaYYMczf
+sintomas = WhEhGJyBUohJspMUd,nbfsAqUD,
+
+nombre_medicamento = mtWmgKNRSmoWJiDb
+nombre_compuesto = ncVOCfUmJEJrsZYtFmyi
+sintomas = fkTOrGH,nmYTuYGUUGdwoZKI,gjVJIHdrSDfMTXMTpOk,
+
+nombre_medicamento = bYOHxCQuy
+nombre_compuesto = EDjRYV
+sintomas = YtuIyYRGPjbWnKgJIcR,
+
+nombre_medicamento = wApusFsFgjg
+nombre_compuesto = GgQrUA
+sintomas = EnrXdRRZOJn,
+
+nombre_medicamento = eOOpqgPdWzyXMq
+nombre_compuesto = NfkQsyYSgtjmCe
+sintomas = HIPuaZzfUxCIUJdR,MlJ,
+
+nombre_medicamento = YrhVZeFhGSbKNqBSQGV
+nombre_compuesto = IxNqJOCFTi
+sintomas = fEwVFoWWwLRqNGLfOlT,
+
+nombre_medicamento = GHyoCYin
+nombre_compuesto = ZfNKBVEETeO
+sintomas = ZoUswkQOzU,vABRfeZ,eGsD,
+
+nombre_medicamento = HXbtpOHraHSeOwQg
+nombre_compuesto = ZKmdhMGOHQHZdqygH
+sintomas = TPT,ESwaljXi,WWjXCRLHGhIdWyMNOmk,
+
+nombre_medicamento = whFKyZmGwRtmlV
+nombre_compuesto = XMr
+sintomas = tyh,nMcjbAInFOBvf,Tej,myfOchPJnhUBWm,fpD,
+
+nombre_medicamento = TwlttzkWzhxUXEczP
+nombre_compuesto = etzWysAavYmyncSBG
+sintomas = lSHuupcGXrQH,BKGMZOKY,twfmwOtsb,aXRqdtyGxGXoAYeBMsvw,
+
+nombre_medicamento = QYTpdXaResIK
+nombre_compuesto = SeGBWdiUQPnOpkmeW
+sintomas = mHyopefEPFhom,WFXSh,VRqfVwOfKfakGv,UaMOwKOxFnVtVBLyEuyv,
+
+nombre_medicamento = WMEbNOmTZJWOPVvc
+nombre_compuesto = LBzuvQWIdtbR
+sintomas = HlNwrFAFXkgftOHdVfy,WAj,
+
+nombre_medicamento = HRt
+nombre_compuesto = PUIXVwYC
+sintomas = XErtcktUlsZPCEHzlyH,flAkYZjIxxINKHZbchV,xMwvVGbcpgrjei,iGzKrhJrd,IWdqXtZoSqcrHGsfZ,
+
+nombre_medicamento = QTygYifxBhuuyrU
+nombre_compuesto = iKvXaZMab
+sintomas = HBDsCJpatQnF,BxTqbVOEm,WhAwwZrYsaL,wPUYwOAZiswTFrHSQHq,uSDAHOAfk,
+
+nombre_medicamento = bqnZFnUxPfUZjuqo
+nombre_compuesto = NfMghWrnbeslBOZo
+sintomas = igIM,lzWypBjlHCPVhJNfkyF,EpIbNjiTctzNziN,wrqCkxWPXFwWHrBMW,reP,
+
+nombre_medicamento = ZZs
+nombre_compuesto = PCDFhjt
+sintomas = ByJZWyxhLppIHIkTwga,GearOkiYPY,
+
+nombre_medicamento = XKayqdOpTSPzfbOj
+nombre_compuesto = OTZtFeJlQxKlENX
+sintomas = fuktcIjVBZx,gex,NptakwqjhUroV,
+
+nombre_medicamento = EHwlkTtDHAgNTTr
+nombre_compuesto = cRVonQnqUpr
+sintomas = MjhbjAsQj,gHycPuUaFXjdZo,rnOsjuyoiUKivZPm,
+
+nombre_medicamento = pyGpLNRvWhGNvTTbP
+nombre_compuesto = wPfLFIMfcKAhvQD
+sintomas = lQWJJqhiqpGux,
+
+nombre_medicamento = yfomVG
+nombre_compuesto = REPMd
+sintomas = ZzpDTkRpCEW,Lqoj,CNoTaAQMpGxZSKcZ,vnd,jfuKlHRNodSe,
+
+nombre_medicamento = WLhQmdRANuISV
+nombre_compuesto = TjfdWZRFqHNHIRBHoIw
+sintomas = lgYkKkGMJivVUZfnH,
+
+nombre_medicamento = oWOGdbkUzzEvDxwEj
+nombre_compuesto = zaHmGkBZVpE
+sintomas = kCJoQAPiyEFiQfkWg,
+
+nombre_medicamento = LnIQyroJkTsDnfReO
+nombre_compuesto = AczUhREEHTrakfxvs
+sintomas = LuAWDvRRoTNxJgQixHRU,bygOc,
+
+nombre_medicamento = InbLvFuOkkeYRJl
+nombre_compuesto = sTunEYwCrt
+sintomas = OvFouRpHr,
+
+nombre_medicamento = kyuj
+nombre_compuesto = eGRKJ
+sintomas = MUt,
+
+nombre_medicamento = EDEFBUJimkYULCKhgIp
+nombre_compuesto = WqZ
+sintomas = wpoVMcvHblI,xPXOtqnBKo,BdChVavgEsqH,
+
+nombre_medicamento = FShbtRBtUakrmIjwqyUY
+nombre_compuesto = pLVrdknQvpzwNCI
+sintomas = RQwHKs,jjaklhcCDET,
+
+nombre_medicamento = RFZJIuMmwutP
+nombre_compuesto = nFQROiBLnoZZZspkPdx
+sintomas = LiNTrluWDkZAIiE,XItkvCOYxVD,fvhC,dQFzNJoxDaVRIku,
+
+nombre_medicamento = kyNXSlIKAGDyWtJ
+nombre_compuesto = KXsrXjOnlgL
+sintomas = PwKwh,whLaNwNlqRBmJu,uDTtBcRLKECOBXp,
+
+nombre_medicamento = DMMS
+nombre_compuesto = RpfqbbiVVA
+sintomas = BQhxvmyXSaXXJVnsawOO,CgMkV,BUyXTyLHnaTt,DZxwEG,
+
+nombre_medicamento = KMdXrEcBrzj
+nombre_compuesto = ARMKthJGAl
+sintomas = QXvtpVjNzUhLSdxSV,
+
+nombre_medicamento = fbaLbMixCCqZEPet
+nombre_compuesto = CaT
+sintomas = cXEJLxkEyEd,sbJpZfPiyJ,
+
