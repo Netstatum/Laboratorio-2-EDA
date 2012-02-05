@@ -192,7 +192,11 @@ class ArbolSintomas{
 	
 		for(int i=0;i<sintomas.size();i++)
 		{
-			snodos.add(this.BuscarSintoma(sintomas.elementAt(i)));
+			try{
+				snodos.add(this.BuscarSintoma(sintomas.elementAt(i)));
+			}catch(ArbolSintomasNoEncontrado e){
+				System.out.println("Sintoma no encontrado");
+			}
 		}
 		
 		return snodos;		
