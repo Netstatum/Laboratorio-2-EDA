@@ -1,9 +1,3 @@
-nombre_medicamento = Aspirina
-nombre_compuesto = Acido
-sintomas = mareos,vomitos,asdf,
-solucion = Descansar y estar en cama
-	Esperar la ambulancia
-
 nombre_medicamento = Chimmy Cherry
 nombre_compuesto = Cherry Changa
 sintomas = Friendship,mareos,vomitos,
@@ -11,4 +5,11 @@ sintomas = Friendship,mareos,vomitos,
 nombre_medicamento = Lenguajes de programacion
 nombre_compuesto = Letras
 sintomas = LOLCode,C,c++,haskell,python,bash,php,java,
+
+nombre_medicamento = Aspirina
+nombre_compuesto = Acido
+sintomas = mareos,vomitos,asdf,piel blanca,
+solucion = Descansar y estar en cama
+	Esperar la ambulancia
+	Tomar mucha agua
 

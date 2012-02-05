@@ -12,6 +12,8 @@
 package grafica;
 
 import java.awt.Dimension;
+import java.awt.*;
+import javax.swing.*;
 
 /**
  *
@@ -19,9 +21,30 @@ import java.awt.Dimension;
  */
 public class respuesta_busca_tox extends javax.swing.JFrame {
 
+    Nodo nodo;
+    ArbolNombres arbol_nombres;
+    ArbolSintomas arbol_sintomas;
+
     /** Creates new form respuesta_busca_tox */
-    public respuesta_busca_tox() {
+    public respuesta_busca_tox(Nodo nodo, ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+
+	this.nodo=nodo;
+
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
+
+	this.NombreComp.setText(nodo.getNombreCompuesto());
+	this.Nombre_medic.setText(nodo.getNombreMedicamento());
+	this.Tratamiento.setText(nodo.getSolucion());
+	
+	String sintomas="";
+	for(int i=0;i<nodo.getSintomas().size();i++)
+	{
+		sintomas+=nodo.getSintomas().elementAt(i)+",";
+	}
+
+	this.sintomas.setText(sintomas);
     }
 
     /** This method is called from within the constructor to
@@ -116,16 +139,36 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     }//GEN-LAST:event_Nombre_medicActionPerformed
 
     private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModificarActionPerformed
-    		Editar ventana3 = new Editar();
-		Dimension dlgSize = ventana3.getPreferredSize();
-		Dimension pantalla = getSize();
-		Dimension ventana = ventana3.getSize() ;
-		ventana3.setLocation((pantalla.width - Editar.WIDTH ) / 2 ,(pantalla.height - Editar.HEIGHT) / 2);
-		ventana3.setLocationRelativeTo(null) ; // CENTRA EL SEGUNDO FRAME EN LA PANTA
-		ventana3.pack() ;
-		ventana3.setResizable(true) ; // PERMITE REDIMENSIONAR
-		ventana3.setVisible(true) ;
-    }//GEN-LAST:event_ModificarActionPerformed
+
+	Nodo nodo=new Nodo();
+	nodo.setNombreMedicamento(this.Nombre_medic.getText());
+	nodo.setNombreCompuesto(this.NombreComp.getText());
+	nodo.setSolucion(this.Tratamiento.getText());
+
+	String []sintomas=this.sintomas.getText().split(",");
+	for(int i=0;i<sintomas.length;i++)
+	{
+		nodo.AgregarSintoma(sintomas[i]);
+	}
+
+	//Borramos el nodo de esta clase con el nodo de this
+	
+	this.arbol_nombres.Eliminar(this.nodo);
+	this.arbol_nombres.Agregar(nodo);
+
+	this.nodo=nodo;
+	
+	//guardamos los cambios en la base de datos
+	
+	try{
+		Fichero f=new Fichero();
+		f.Escribir(this.arbol_nombres);
+	}catch(Exception e){
+
+		JOptionPane.showMessageDialog(null, "No se puede escribir en 'database.txt'");
+	}
+
+    }
 
     /**
     * @param args the command line arguments
@@ -133,7 +176,7 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new respuesta_busca_tox().setVisible(true);
+                new respuesta_busca_tox(null, null, null).setVisible(true);
             }
         });
     }

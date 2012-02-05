@@ -10,6 +10,10 @@
  */
 
 package grafica;
+import java.awt.*;
+import javax.swing.*;
+
+import java.io.*;
 
 /**
  *
@@ -17,9 +21,14 @@ package grafica;
  */
 public class Sustancia extends javax.swing.JFrame {
 
+	ArbolNombres arbol_nombres;
+	ArbolSintomas arbol_sintomas;
+
     /** Creates new form Sustancia */
-    public Sustancia() {
+    public Sustancia(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+	this.arbol_sintomas=arbol_sintomas;
+	this.arbol_nombres=arbol_nombres;
     }
 
     /** This method is called from within the constructor to
@@ -83,7 +92,42 @@ public class Sustancia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarSolucionActionPerformed
-        //Variable Sustancia Ingresada=sustanciaIngresada.getText();
+
+	Nodo nodo=null;
+	if(this.medicamentoSustancia.getText().length()!=0 && this.sustanciaIngresada.getText().length()==0)
+	{
+		try{
+			nodo=this.arbol_nombres.BuscarCompuesto(this.medicamentoSustancia.getText());
+		}catch(ArbolNombres_NoEncontrado e){
+			
+			JOptionPane.showMessageDialog(null, "No se encontro el medicamento buscardo");
+		}
+	}else if(this.sustanciaIngresada.getText().length()!=0 && this.medicamentoSustancia.getText().length()==0){
+		try{
+			nodo=this.arbol_nombres.BuscarMedicamento(this.sustanciaIngresada.getText());
+		}catch(ArbolNombres_NoEncontrado e){
+			
+			JOptionPane.showMessageDialog(null, "No se encontro el compuesto buscado");
+		}
+	}else if(this.sustanciaIngresada.getText().length()!=0 && this.medicamentoSustancia.getText().length()!=0){
+		try{
+			nodo=this.arbol_nombres.BuscarCompuesto(this.sustanciaIngresada.getText());
+		}catch(ArbolNombres_NoEncontrado e){
+			
+			JOptionPane.showMessageDialog(null, "No se encontro el compuesto buscardo");
+		}
+
+		JOptionPane.showMessageDialog(null, "Ha buscado un compuesto y un medicamento al mismo tiempo, se ha buscado por el nombre del compuesto solamente para evitar conflictos");
+	}else{
+		
+		JOptionPane.showMessageDialog(null, "Debe ingresar un compuesto o medicamento a buscar");
+	}
+
+	if(nodo!=null)
+	{
+		new respuesta_busca_tox(nodo, this.arbol_nombres, this.arbol_sintomas).setVisible(true);
+	}
+
     }//GEN-LAST:event_buscarSolucionActionPerformed
 
     private void sustanciaIngresadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sustanciaIngresadaActionPerformed
@@ -100,7 +144,7 @@ public class Sustancia extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Sustancia().setVisible(true);
+                new Sustancia(null, null).setVisible(true);
             }
         });
     }

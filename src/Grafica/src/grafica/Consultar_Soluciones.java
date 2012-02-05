@@ -87,7 +87,7 @@ public class Consultar_Soluciones extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Sustancia ventana2_1 = new Sustancia();
+        Sustancia ventana2_1 = new Sustancia(this.arbol_nombres, this.arbol_sintomas);
         Dimension dlgSize = ventana2_1.getPreferredSize();
         Dimension pantalla = getSize();
         Dimension ventana = ventana2_1.getSize() ;

@@ -15,8 +15,15 @@ public class felipe_main{
 		ArbolNombres arbol=f.ArbolNombres();
 
 		f.Escribir(arbol);
+
+		Vector<Nodo> nodos=arbol.Nodos();
+
+		for(int i=0;i<nodos.size();i++)
+		{
+			//System.out.println(nodos.elementAt(i).getNombreCompuesto());
+		}
 		
-		arbol.BuscarMedicamento("Chimmy Cherry");
+		arbol.BuscarCompuesto("Letras");
 
 	}
 }

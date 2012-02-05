@@ -35,7 +35,8 @@ class ArbolNombres{
 			{
 				this.raiz.setNodoIzq(nodo);
 
-			}else if(this.raiz.getNodoDer()==null){
+			}
+			if(this.raiz.getNodoDer()==null){
 
 				this.raiz.setNodoDer(nodo);
 			}else{
