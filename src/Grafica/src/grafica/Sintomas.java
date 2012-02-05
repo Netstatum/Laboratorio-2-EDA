@@ -103,6 +103,7 @@ public class Sintomas extends javax.swing.JFrame {
 	}else{
 		//buscamos los sintomas en el arbol
 		try{
+			//separamos los sintomas por las comas
 			String []sintomas=sintomasIngresados.getText().split(",");
 
 			Vector<String> vector=new Vector();
@@ -110,15 +111,17 @@ public class Sintomas extends javax.swing.JFrame {
 			int i;
 			for(i=0;i<sintomas.length;i++)
 			{
-				vector.add(sintomas[i]);
+				vector.add(sintomas[i].trim());
 			}
 
+			
 			if(vector.size()>=1)
 			{
+				//le damos a buscar al arbol_sintomas la mejor
+				//solcion en base al vector de sintomas
 				Vector <String> mejor=this.arbol_sintomas.mejorSolucion(this.arbol_sintomas.BuscarSintoma(vector));
 
-				System.out.println(mejor.elementAt(0));
-
+				//buscamos el nodo en arbol_nombres
 				Nodo nodo=this.arbol_nombres.BuscarMedicamento(mejor.elementAt(0));
 				System.out.println(nodo.getNombreCompuesto());
 			}
