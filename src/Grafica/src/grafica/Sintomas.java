@@ -35,6 +35,7 @@ public class Sintomas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         sintomasIngresados = new javax.swing.JTextField();
         buscarSolucion = new javax.swing.JButton();
+        medicamentoSintomas = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -59,6 +60,14 @@ public class Sintomas extends javax.swing.JFrame {
         buscarSolucion.setBounds(120, 120, 130, 23);
         jDesktopPane1.add(buscarSolucion, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        medicamentoSintomas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicamentoSintomasActionPerformed(evt);
+            }
+        });
+        medicamentoSintomas.setBounds(30, 170, 310, 20);
+        jDesktopPane1.add(medicamentoSintomas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -67,7 +76,7 @@ public class Sintomas extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -80,6 +89,10 @@ public class Sintomas extends javax.swing.JFrame {
     private void buscarSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarSolucionActionPerformed
         // Variable sintomas ingresados=sintomasIngresados.getText();
     }//GEN-LAST:event_buscarSolucionActionPerformed
+
+    private void medicamentoSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamentoSintomasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicamentoSintomasActionPerformed
 
     /**
     * @param args the command line arguments
@@ -96,6 +109,7 @@ public class Sintomas extends javax.swing.JFrame {
     private javax.swing.JButton buscarSolucion;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField medicamentoSintomas;
     private javax.swing.JTextField sintomasIngresados;
     // End of variables declaration//GEN-END:variables
 
