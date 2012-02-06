@@ -22,8 +22,6 @@ class Nodo{
 	 * @param nombre_medicamento El nombre del medicamento que contendrá el
 	 * nodo
 	 * @param nombre_compuesto El nombre del compuesto que contendrá en nodo
-	 * @param sintomas Un array de los posibles síntomas que pueda tener el
-	 * ingerir este medicamento o compuesto o sustancia
 	 * @param solucion La solucion para tratar la intoxcicacion del paciente*/
 	Nodo(String nombre_medicamento, String nombre_compuesto, String solucion)
 	{
