@@ -10,6 +10,10 @@
  */
 
 package grafica;
+import java.awt.*;
+import javax.swing.*;
+
+import java.io.*;
 
 /**
  *
@@ -17,9 +21,14 @@ package grafica;
  */
 public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
 
+    ArbolNombres arbol_nombres;
+    ArbolSintomas arbol_sintomas;
+
     /** Creates new form Ingresar_Nuevo_Toxico */
-    public Ingresar_Nuevo_Toxico() {
+    public Ingresar_Nuevo_Toxico(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
     }
 
     /** This method is called from within the constructor to
@@ -118,6 +127,28 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
 //Variable toxico=toxicoIngresado.getText();
 //Variable sintoma=sintomaIngresado.getText();
 //Variable medicamento=meicamentoIngresado.getText();
+	Nodo nodo=new Nodo();
+	nodo.setNombreMedicamento(this.medicamentoIngresado.getText());
+	nodo.setNombreCompuesto(this.toxicoIngresado.getText());
+	
+	String []sintomas=this.sintomaIngresado.getText().split(",");
+
+	for(int i=0;i<sintomas.length;i++)
+	{
+		nodo.AgregarSintoma(sintomas[i]);
+	}
+
+	this.arbol_nombres.Agregar(nodo);
+
+	try{
+		Fichero f=new Fichero();
+		f.Escribir(this.arbol_nombres);
+		
+
+		JOptionPane.showMessageDialog(null, "Guardado");
+	}catch(Exception e){
+		JOptionPane.showMessageDialog(null, "No se puede abrir 'database.txt'");
+	}
 
         // TODO add your handling code here:
     }//GEN-LAST:event_GuardarActionPerformed
@@ -128,7 +159,7 @@ public class Ingresar_Nuevo_Toxico extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ingresar_Nuevo_Toxico().setVisible(true);
+                new Ingresar_Nuevo_Toxico(null, null).setVisible(true);
             }
         });
     }

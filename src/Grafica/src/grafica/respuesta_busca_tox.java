@@ -149,7 +149,26 @@ public class respuesta_busca_tox extends javax.swing.JFrame {
     }//GEN-LAST:event_Nombre_medicActionPerformed
 
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
-        // TODO add your handling code here:
+	//buscamos en el arbol el compuesto o medicamento a eliminar
+	
+	String compuesto=this.NombreComp.getText();
+	try{
+		Nodo nodo=this.arbol_nombres.BuscarCompuesto(compuesto);
+		this.arbol_nombres.Eliminar(nodo);
+		Fichero f=new Fichero();
+		f.Escribir(this.arbol_nombres);
+		
+		
+		JOptionPane.showMessageDialog(null, "Eliminado");
+
+	}catch(ArbolNombres_NoEncontrado e){
+		JOptionPane.showMessageDialog(null, "No se encontro el compuesto o medicamento a eliminar");
+	}catch(Exception e) {
+		
+		JOptionPane.showMessageDialog(null, "No se puede abrir 'database.txt'");
+	}
+
+
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     private void ModificarActionPerformed(java.awt.event.ActionEvent evt) {                                          

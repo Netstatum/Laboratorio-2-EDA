@@ -19,9 +19,14 @@ import java.awt.Dimension;
  */
 public class Modificar_Datos extends javax.swing.JFrame {
 
+    ArbolNombres arbol_nombres;
+    ArbolSintomas arbol_sintomas;
+
     /** Creates new form Modificar_Datos */
-    public Modificar_Datos() {
+    public Modificar_Datos(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
     }
 
     /** This method is called from within the constructor to
@@ -95,7 +100,7 @@ public class Modificar_Datos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Ingresar_Nuevo_Toxico ventana1_1 = new Ingresar_Nuevo_Toxico();
+        Ingresar_Nuevo_Toxico ventana1_1 = new Ingresar_Nuevo_Toxico(this.arbol_nombres, this.arbol_sintomas);
         Dimension dlgSize = ventana1_1.getPreferredSize();
         Dimension pantalla = getSize();
         Dimension ventana = ventana1_1.getSize() ;
@@ -119,7 +124,7 @@ public class Modificar_Datos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Eliminar ventana1_4 = new Eliminar();
+        Eliminar ventana1_4 = new Eliminar(this.arbol_nombres, this.arbol_sintomas);
         Dimension dlgSize = ventana1_4.getPreferredSize();
         Dimension pantalla = getSize();
         Dimension ventana = ventana1_4.getSize() ;
@@ -136,7 +141,7 @@ public class Modificar_Datos extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Modificar_Datos().setVisible(true);
+                new Modificar_Datos(null, null).setVisible(true);
             }
         });
     }

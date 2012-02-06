@@ -124,7 +124,9 @@ public class Sintomas extends javax.swing.JFrame {
 
 				//buscamos el nodo en arbol_nombres
 				Nodo nodo=this.arbol_nombres.BuscarMedicamento(mejor.elementAt(0));
-				System.out.println(nodo.getNombreCompuesto());
+				respuesta_busca_tox r=new respuesta_busca_tox(nodo, this.arbol_nombres, this.arbol_sintomas);
+				r.setVisible(true);
+
 			}
 
 

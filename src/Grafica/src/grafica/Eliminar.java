@@ -10,6 +10,10 @@
  */
 
 package grafica;
+import java.awt.*;
+import javax.swing.*;
+
+import java.io.*;
 
 /**
  *
@@ -17,9 +21,14 @@ package grafica;
  */
 public class Eliminar extends javax.swing.JFrame {
 
+    ArbolNombres arbol_nombres;
+    ArbolSintomas arbol_sintomas;
+
     /** Creates new form Eliminar */
-    public Eliminar() {
+    public Eliminar(ArbolNombres arbol_nombres, ArbolSintomas arbol_sintomas) {
         initComponents();
+	this.arbol_nombres=arbol_nombres;
+	this.arbol_sintomas=arbol_sintomas;
     }
 
     /** This method is called from within the constructor to
@@ -75,11 +84,29 @@ public class Eliminar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarActionPerformed
-        // //Variable toxico a eliminar=toxicoEliminado.getText();
+	//buscamos en el arbol el compuesto o medicamento a eliminar
+	String compuesto=this.toxicoEliminado.getText();
+
+	try{
+		Nodo nodo=this.arbol_nombres.BuscarCompuesto(compuesto);
+		this.arbol_nombres.Eliminar(nodo);
+		Fichero f=new Fichero();
+		f.Escribir(this.arbol_nombres);
+		
+		
+		JOptionPane.showMessageDialog(null, "Eliminado");
+
+	}catch(ArbolNombres_NoEncontrado e){
+		JOptionPane.showMessageDialog(null, "No se encontro el compuesto o medicamento a eliminar");
+	}catch(Exception e) {
+		
+		JOptionPane.showMessageDialog(null, "No se puede abrir 'database.txt'");
+	}
     }//GEN-LAST:event_EliminarActionPerformed
 
     private void toxicoEliminadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toxicoEliminadoActionPerformed
-        // TODO add your handling code here:
+	    
+
     }//GEN-LAST:event_toxicoEliminadoActionPerformed
 
     /**
@@ -88,7 +115,7 @@ public class Eliminar extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Eliminar().setVisible(true);
+                new Eliminar(null, null).setVisible(true);
             }
         });
     }
