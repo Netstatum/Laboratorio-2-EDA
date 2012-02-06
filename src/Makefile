@@ -26,7 +26,6 @@ jar-debug: debug
 
 clear:
 	rm *.class ToxicDrop.jar
-	rm -r docs
 doc:
 	doxygen documentacion.cfg
 	cp docs/refman.tex docs/doxygen/latex

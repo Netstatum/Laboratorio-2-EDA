@@ -16,20 +16,21 @@ public class felipe_main{
 		ArbolSintomas arbol_sintomas=f.ArbolSintomas();
 
 		f.Escribir(arbol);
+	
+		Vector<Snodo> snodos=arbol_sintomas.VSnodos();
+
+		for(int i=0;i<snodos.size();i++)
+		{
+			for(int j=0;j<snodos.elementAt(i).getNombreCompuestos().size();j++)
+			{
+				//System.out.println(snodos.elementAt(i).getNombreCompuestos().elementAt(j));
+			}
+		}
+
 
 		Vector<String> sintomas=new Vector();
 
-		System.out.println(""+arbol_sintomas.VSnodos().elementAt(0).getSintoma());
-
-
-
-		System.out.println(""+arbol.Nodos().elementAt(0).getNombreCompuesto());
-
-
-
-		System.out.println(""+arbol.Nodos().elementAt(0).getNombreMedicamento());
-
-		sintomas.add("LOLCOde");
+		sintomas.add("Vomitos");
 
 		try{
 			Vector <String> mejor=arbol_sintomas.mejorSolucion(arbol_sintomas.BuscarSintoma(sintomas));
