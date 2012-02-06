@@ -41,10 +41,8 @@ public class Modificar_Datos extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ingresar.jpg"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -61,29 +59,16 @@ public class Modificar_Datos extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jButton3.setBounds(50, 100, 70, 80);
+        jButton3.setBounds(50, 160, 70, 80);
         jDesktopPane1.add(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Eliminacion de agentes toxicos.jpg"))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        jButton4.setBounds(50, 180, 70, 80);
-        jDesktopPane1.add(jButton4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresar agente toxico.jpg"))); // NOI18N
         jLabel1.setBounds(140, 50, 205, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Buscar agente toxico.jpg"))); // NOI18N
-        jLabel3.setBounds(140, 120, 152, 40);
+        jLabel3.setBounds(150, 180, 152, 40);
         jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar.jpg"))); // NOI18N
-        jLabel4.setBounds(140, 200, 73, 36);
-        jDesktopPane1.add(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -123,18 +108,6 @@ public class Modificar_Datos extends javax.swing.JFrame {
         ventana1_3.setVisible(true) ;
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        Eliminar ventana1_4 = new Eliminar(this.arbol_nombres, this.arbol_sintomas);
-        Dimension dlgSize = ventana1_4.getPreferredSize();
-        Dimension pantalla = getSize();
-        Dimension ventana = ventana1_4.getSize() ;
-        ventana1_4.setLocation((pantalla.width - Eliminar.WIDTH ) / 2 ,(pantalla.height - Eliminar.HEIGHT) / 2);
-        ventana1_4.setLocationRelativeTo(null) ; // CENTRA EL SEGUNDO FRAME EN LA PANTA
-        ventana1_4.pack() ;
-        ventana1_4.setResizable(true) ; // PERMITE REDIMENSIONAR
-        ventana1_4.setVisible(true) ;
-    }//GEN-LAST:event_jButton4ActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -149,11 +122,9 @@ public class Modificar_Datos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 
 }

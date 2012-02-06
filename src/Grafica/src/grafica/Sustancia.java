@@ -41,23 +41,21 @@ public class Sustancia extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel1 = new javax.swing.JLabel();
         sustanciaIngresada = new javax.swing.JTextField();
         buscarSolucion = new javax.swing.JButton();
         medicamentoSustancia = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        label1 = new java.awt.Label();
+        label2 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ingrese.jpg"))); // NOI18N
-        jLabel1.setBounds(40, 20, 150, 40);
-        jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         sustanciaIngresada.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sustanciaIngresadaActionPerformed(evt);
             }
         });
-        sustanciaIngresada.setBounds(40, 80, 210, 20);
+        sustanciaIngresada.setBounds(40, 90, 210, 20);
         jDesktopPane1.add(sustanciaIngresada, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         buscarSolucion.setText("Buscar Solucion");
@@ -66,7 +64,7 @@ public class Sustancia extends javax.swing.JFrame {
                 buscarSolucionActionPerformed(evt);
             }
         });
-        buscarSolucion.setBounds(120, 120, 170, 23);
+        buscarSolucion.setBounds(210, 190, 170, 23);
         jDesktopPane1.add(buscarSolucion, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         medicamentoSustancia.addActionListener(new java.awt.event.ActionListener() {
@@ -74,8 +72,20 @@ public class Sustancia extends javax.swing.JFrame {
                 medicamentoSustanciaActionPerformed(evt);
             }
         });
-        medicamentoSustancia.setBounds(40, 170, 210, 20);
+        medicamentoSustancia.setBounds(40, 150, 210, 20);
         jDesktopPane1.add(medicamentoSustancia, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ingrese.jpg"))); // NOI18N
+        jLabel2.setBounds(40, 20, 150, 40);
+        jDesktopPane1.add(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        label1.setText("Medicamento:");
+        label1.setBounds(40, 70, 90, 20);
+        jDesktopPane1.add(label1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        label2.setText("Compuesto: ");
+        label2.setBounds(40, 130, 120, 20);
+        jDesktopPane1.add(label2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,7 +162,9 @@ public class Sustancia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buscarSolucion;
     private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private java.awt.Label label1;
+    private java.awt.Label label2;
     private javax.swing.JTextField medicamentoSustancia;
     private javax.swing.JTextField sustanciaIngresada;
     // End of variables declaration//GEN-END:variables

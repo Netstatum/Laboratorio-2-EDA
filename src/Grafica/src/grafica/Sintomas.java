@@ -46,7 +46,6 @@ public class Sintomas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         sintomasIngresados = new javax.swing.JTextField();
         buscarSolucion = new javax.swing.JButton();
-        medicamentoSintomas = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -59,7 +58,7 @@ public class Sintomas extends javax.swing.JFrame {
                 sintomasIngresadosActionPerformed(evt);
             }
         });
-        sintomasIngresados.setBounds(30, 80, 310, 20);
+        sintomasIngresados.setBounds(30, 130, 310, 20);
         jDesktopPane1.add(sintomasIngresados, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         buscarSolucion.setText("Buscar Solucion");
@@ -68,16 +67,8 @@ public class Sintomas extends javax.swing.JFrame {
                 buscarSolucionActionPerformed(evt);
             }
         });
-        buscarSolucion.setBounds(120, 120, 130, 23);
+        buscarSolucion.setBounds(120, 170, 130, 23);
         jDesktopPane1.add(buscarSolucion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        medicamentoSintomas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                medicamentoSintomasActionPerformed(evt);
-            }
-        });
-        medicamentoSintomas.setBounds(30, 170, 310, 20);
-        jDesktopPane1.add(medicamentoSintomas, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,10 +133,6 @@ public class Sintomas extends javax.swing.JFrame {
 
     }//GEN-LAST:event_buscarSolucionActionPerformed
 
-    private void medicamentoSintomasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamentoSintomasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_medicamentoSintomasActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -161,7 +148,6 @@ public class Sintomas extends javax.swing.JFrame {
     private javax.swing.JButton buscarSolucion;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField medicamentoSintomas;
     private javax.swing.JTextField sintomasIngresados;
     // End of variables declaration//GEN-END:variables
 
