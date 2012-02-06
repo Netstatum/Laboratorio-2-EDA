@@ -6,7 +6,7 @@ public class felipe_main{
 
 	public static void main(String[] args)throws IOException, ArbolNombres_NoEncontrado
 	{
-		
+
 		Fichero f=new Fichero();
 
 		f.Leer();
@@ -18,6 +18,16 @@ public class felipe_main{
 		f.Escribir(arbol);
 
 		Vector<String> sintomas=new Vector();
+
+		System.out.println(""+arbol_sintomas.VSnodos().elementAt(0).getSintoma());
+
+
+
+		System.out.println(""+arbol.Nodos().elementAt(0).getNombreCompuesto());
+
+
+
+		System.out.println(""+arbol.Nodos().elementAt(0).getNombreMedicamento());
 
 		sintomas.add("LOLCOde");
 
@@ -37,7 +47,7 @@ public class felipe_main{
 			System.out.println("No encontrado");
 		}
 
-		
+
 		arbol.BuscarCompuesto("Letras");
 
 	}

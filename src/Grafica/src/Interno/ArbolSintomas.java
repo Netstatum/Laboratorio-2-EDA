@@ -45,8 +45,7 @@ class ArbolSintomas{
 		for(int i=0;i<snodos.size();i++)
 		{
 			this.agregarSnodo(snodos.elementAt(i));
-		}		
-		
+		}			
 	}
 	
 	/**Agrega el snodo al lugar correspondiente segun un orden alfabetico dado por el nombre del sintoma,
@@ -180,12 +179,27 @@ class ArbolSintomas{
 			throw new ArbolSintomasNoEncontrado("No hay ningún nodo en la base de datos");
 		}else{
 			try{			
-				return this.buscarSintoma(this.raiz.getSnodoDer(), cadena);
+				return this.BuscarSintoma(this.raiz, cadena);
 			}catch(ArbolSintomasNoEncontrado e){
 				System.out.println("No se encontró "+cadena+" en la base de datos");
-                                return this.raiz;
+                return null;
 			}
 		}
+	}
+	
+	public Vector<Snodo> BuscarSintoma(Vector<String> sintomas)throws ArbolSintomasNoEncontrado{
+		Vector<Snodo> snodos = new Vector();
+	
+		for(int i=0;i<sintomas.size();i++)
+		{
+			try{
+				snodos.add(this.BuscarSintoma(sintomas.elementAt(i)));
+			}catch(ArbolSintomasNoEncontrado e){
+				System.out.println("Sintoma no encontrado");
+			}
+		}
+		
+		return snodos;		
 	}
 
 	/**Busca la cadena asumiendo que es un compuesto en el árbol binario dado, si no se encuentra entonces se lanza una excepción
@@ -193,7 +207,7 @@ class ArbolSintomas{
 	   @param raiz Raíz del árbol binario en donde buscar la cadena.
 	   @param cadena Un string a buscar en el árbol binario se ignoran las mayúsculas
 	*/
-	private Snodo buscarSintoma(Snodo raiz, String cadena)throws ArbolSintomasNoEncontrado
+	private Snodo BuscarSintoma(Snodo raiz, String cadena)throws ArbolSintomasNoEncontrado
 	{
 		if(raiz==null)
 		{
@@ -213,13 +227,99 @@ class ArbolSintomas{
 
 				if(compuesto<0)
 				{
-					return buscarSintoma(raiz.getSnodoIzq(), cadena);
+					return BuscarSintoma(raiz.getSnodoIzq(), cadena);
 				}else{
-					return buscarSintoma(raiz.getSnodoDer(), cadena);
+					return BuscarSintoma(raiz.getSnodoDer(), cadena);
 				}
 			}
 		}
 	}
+	
+	/** Esta funcion recive un vector de snodos de diferentes sintomas, el proposito es encontrar la(s)
+		enfermedades que más se repiten, ya que estas son las mejores candidatos de lo que tiene en paciente.
+		Mediante un algoritmo de comparación crea un vector con los compuestos más repetidos
+		@param snodos : vector que contiene todos los snodos
+		@return Vector<String> el cual contiene todos los compuestos que mejor describen esa enfermedad
+	*/
+	public Vector<String> mejorSolucion(Vector<Snodo> snodos){
+		Vector<String> all,repetido,mejores;
+		Vector<Integer> repeticiones;
+		String comparador;
+		int repetidor,i,j;
+		
+		/** Se inicializan los vectores
+			@param all : lista completa de compuestos
+			@param repetido : lista de compuestos repetidos
+			@param repeticiones : numero de veces que se repite cada compuesto con posiciones correspondientes
+			@param mejores : lista de mejores candidatos de compuestos
+		*/
+		all = new Vector();
+		repetido = new Vector();
+		repeticiones = new Vector();
+		mejores = new Vector();
+		
+		
+		//Se agregan todos los compuestos a un solo vector, no importa si se repiten
+		for(i=0;i<snodos.size();i++){
+			for(j=0;j<snodos.elementAt(i).getNombreCompuestos().size();j++){
+				all.add(snodos.elementAt(i).getNombreCompuestos().elementAt(j));
+			}			
+		}
+		
+		//Se comparan los elementos del vector con todos los que le proceden para contar cuantas veces es repetido
+		for(i=0;i<all.size();i++){
+		
+			comparador = all.elementAt(i);
+			repetidor = 1;
+			
+			//Si el vector repetido no contiene al elemento ha comparar
+			if(!repetido.contains(comparador)){
+				for(j=i+1;j<all.size();j++){
+					//Se suma la veces que se repite
+					if(all.elementAt(j).equalsIgnoreCase(comparador)){
+						repetidor++;
+					}
+				}
+				
+				//Si se repite se añaden correspondientemente los datos a sus vectores
+				if(repetidor>1){
+					repetido.add(comparador);
+					repeticiones.add(repetidor);
+				}
+			}
+		}
+		
+		//Si existen compuestos repetidos
+		if(!repetido.isEmpty()){
+		
+			comparador = repetido.elementAt(0);
+			repetidor = repeticiones.elementAt(0);
+			
+			//Se compara el numero de repeticiones con los demas en el vector
+			for(j=1;j<repeticiones.size();j++){
+				//Si hay uno con mas repeticiones se reemplaza y el vector mejores se vacia
+				if(repeticiones.elementAt(j)>repetidor){
+					comparador = repetido.elementAt(j);
+					repetidor = repeticiones.elementAt(j);
+					mejores.clear();
+				//Si hay unos con la misma cantidad de repeticiones se añada al array mejores
+				}else if(repeticiones.elementAt(j)==repetidor){
+					mejores.add(repetido.elementAt(j));
+				}
+			}
+
+			//El elemento comparador es el ultimo en agregarse al vector
+			mejores.add(comparador);
+			
+		}else{
+			//Si no hay repeticiones entonces el vector all contiene los mejores candidatos
+			return all;
+		}
+		
+		//Se retorna el vector con los mejores
+		return mejores;
+	}
+	
 }
 
 /**@class ArbolSintomasNoEncontrado : 

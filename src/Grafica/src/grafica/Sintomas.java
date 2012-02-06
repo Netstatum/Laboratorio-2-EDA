@@ -12,6 +12,10 @@
 package grafica;
 
 import java.util.Vector;
+import java.awt.*;
+import javax.swing.*;
+
+import java.io.*;
 
 /**
  *
@@ -99,7 +103,7 @@ public class Sintomas extends javax.swing.JFrame {
 	
 	if(sintomasIngresados.getText()==null)
 	{
-		System.out.println("Debe ingresar los sintomas a buscar");
+		JOptionPane.showMessageDialog(null, "Debe ingresar los sintomas a buscar separados por comas");
 	}else{
 		//buscamos los sintomas en el arbol
 		try{
@@ -112,7 +116,6 @@ public class Sintomas extends javax.swing.JFrame {
 			for(i=0;i<sintomas.length;i++)
 			{
 				vector.add(sintomas[i].trim());
-				System.out.println(sintomas[i].trim());
 			}
 
 			
@@ -131,9 +134,9 @@ public class Sintomas extends javax.swing.JFrame {
 
 
 		}catch(ArbolSintomasNoEncontrado e){
-			System.out.println("Sintoma no encontrado");
+			JOptionPane.showMessageDialog(null, "Sintoma no encontrado");
 		}catch(ArbolNombres_NoEncontrado e){
-			System.out.println("Compuesto o medicamento no encontrado");
+			JOptionPane.showMessageDialog(null, "Compuesto o medicamento no encontrado");
 		}
 	}
 
