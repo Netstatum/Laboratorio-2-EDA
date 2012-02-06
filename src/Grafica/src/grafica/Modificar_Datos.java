@@ -40,9 +40,7 @@ public class Modificar_Datos extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ingresar.jpg"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,25 +48,12 @@ public class Modificar_Datos extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jButton1.setBounds(50, 30, 70, 70);
+        jButton1.setBounds(160, 60, 70, 70);
         jDesktopPane1.add(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Busqueda.jpg"))); // NOI18N
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jButton3.setBounds(50, 160, 70, 80);
-        jDesktopPane1.add(jButton3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ingresar agente toxico.jpg"))); // NOI18N
-        jLabel1.setBounds(140, 50, 205, 40);
+        jLabel1.setBounds(100, 170, 205, 40);
         jDesktopPane1.add(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Buscar agente toxico.jpg"))); // NOI18N
-        jLabel3.setBounds(150, 180, 152, 40);
-        jDesktopPane1.add(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,18 +81,6 @@ public class Modificar_Datos extends javax.swing.JFrame {
         ventana1_1.setVisible(true) ;
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Buscar_Agente_Toxico ventana1_3 = new Buscar_Agente_Toxico();
-        Dimension dlgSize = ventana1_3.getPreferredSize();
-        Dimension pantalla = getSize();
-        Dimension ventana = ventana1_3.getSize() ;
-        ventana1_3.setLocation((pantalla.width - Buscar_Agente_Toxico.WIDTH ) / 2 ,(pantalla.height - Buscar_Agente_Toxico.HEIGHT) / 2);
-        ventana1_3.setLocationRelativeTo(null) ; // CENTRA EL SEGUNDO FRAME EN LA PANTA
-        ventana1_3.pack() ;
-        ventana1_3.setResizable(true) ; // PERMITE REDIMENSIONAR
-        ventana1_3.setVisible(true) ;
-    }//GEN-LAST:event_jButton3ActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -121,10 +94,8 @@ public class Modificar_Datos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
 }
